@@ -1,11 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
+<<<<<<< HEAD
 using System.Runtime.CompilerServices;
 using UnityEditor;
+=======
+>>>>>>> 03429261b8644fb86db73bfe784c56af70b2c552
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+<<<<<<< HEAD
     private float horizontalInput, verticalInput;
     public Animator animator;
     public float speed = 5f;
@@ -13,17 +17,25 @@ public class PlayerController : MonoBehaviour
 
     private Vector2 boxColInitSize;
     private Vector2 boxColInitOffset;
+=======
+    public Animator animator;
+>>>>>>> 03429261b8644fb86db73bfe784c56af70b2c552
 
     // Start is called before the first frame update
     void Start()
     {
+<<<<<<< HEAD
         boxColInitSize = boxCol.size;
         boxColInitOffset = boxCol.offset;
+=======
+
+>>>>>>> 03429261b8644fb86db73bfe784c56af70b2c552
     }
 
     // Update is called once per frame
     void Update()
     {
+<<<<<<< HEAD
         GetInput();
 
 
@@ -80,10 +92,22 @@ public class PlayerController : MonoBehaviour
             scale.x = -1f * Mathf.Abs(scale.x);
         }
         else if (horizontal > 0)
+=======
+        float speed = Input.GetAxis("Horizontal");
+        animator.SetFloat("Speed", Mathf.Abs(speed));
+
+        Vector3 scale = transform.localScale;
+        if (speed < 0)
+        {
+            scale.x = -1f * Mathf.Abs(scale.x);
+        }
+        else if (speed > 0)
+>>>>>>> 03429261b8644fb86db73bfe784c56af70b2c552
         {
             scale.x = Mathf.Abs(scale.x);
         }
         transform.localScale = scale;
+<<<<<<< HEAD
 
         animator.SetFloat("Speed", horizontal);
     }
@@ -94,5 +118,7 @@ public class PlayerController : MonoBehaviour
         {
             animator.SetTrigger("Jump");
         }
+=======
+>>>>>>> 03429261b8644fb86db73bfe784c56af70b2c552
     }
 }

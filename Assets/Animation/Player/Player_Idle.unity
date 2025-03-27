@@ -154,7 +154,11 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
+<<<<<<< HEAD
   m_Offset: {x: 0, y: -0.04071867}
+=======
+  m_Offset: {x: 0, y: -0.072264016}
+>>>>>>> 03429261b8644fb86db73bfe784c56af70b2c552
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -165,7 +169,11 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
+<<<<<<< HEAD
   m_Size: {x: 1, y: 0.92}
+=======
+  m_Size: {x: 1, y: 0.85547197}
+>>>>>>> 03429261b8644fb86db73bfe784c56af70b2c552
   m_EdgeRadius: 0
 --- !u!212 &78571727
 SpriteRenderer:
@@ -227,13 +235,18 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 78571725}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+<<<<<<< HEAD
   m_LocalPosition: {x: -8, y: -2, z: 0}
+=======
+  m_LocalPosition: {x: 0, y: -2, z: 0}
+>>>>>>> 03429261b8644fb86db73bfe784c56af70b2c552
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
 --- !u!1 &143910803
 GameObject:
   m_ObjectHideFlags: 0
@@ -345,6 +358,8 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+=======
+>>>>>>> 03429261b8644fb86db73bfe784c56af70b2c552
 --- !u!1001 &405307069
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -360,7 +375,11 @@ PrefabInstance:
     - target: {fileID: 5644355427627704005, guid: 6e00766903ca79c429a33530d6ad25d1,
         type: 3}
       propertyPath: m_RootOrder
+<<<<<<< HEAD
       value: 8
+=======
+      value: 2
+>>>>>>> 03429261b8644fb86db73bfe784c56af70b2c552
       objectReference: {fileID: 0}
     - target: {fileID: 5644355427627704005, guid: 6e00766903ca79c429a33530d6ad25d1,
         type: 3}
@@ -370,12 +389,20 @@ PrefabInstance:
     - target: {fileID: 5644355427627704005, guid: 6e00766903ca79c429a33530d6ad25d1,
         type: 3}
       propertyPath: m_LocalPosition.y
+<<<<<<< HEAD
       value: -1.5
+=======
+      value: -1
+>>>>>>> 03429261b8644fb86db73bfe784c56af70b2c552
       objectReference: {fileID: 0}
     - target: {fileID: 5644355427627704005, guid: 6e00766903ca79c429a33530d6ad25d1,
         type: 3}
       propertyPath: m_LocalPosition.z
+<<<<<<< HEAD
       value: -0.01
+=======
+      value: 0
+>>>>>>> 03429261b8644fb86db73bfe784c56af70b2c552
       objectReference: {fileID: 0}
     - target: {fileID: 5644355427627704005, guid: 6e00766903ca79c429a33530d6ad25d1,
         type: 3}
@@ -414,6 +441,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6e00766903ca79c429a33530d6ad25d1, type: 3}
+<<<<<<< HEAD
 --- !u!1 &607866127
 GameObject:
   m_ObjectHideFlags: 0
@@ -747,6 +775,8 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+=======
+>>>>>>> 03429261b8644fb86db73bfe784c56af70b2c552
 --- !u!1 &1255037359 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4792002413901235725, guid: 6e00766903ca79c429a33530d6ad25d1,
@@ -773,7 +803,11 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
+<<<<<<< HEAD
   m_Constraints: 4
+=======
+  m_Constraints: 0
+>>>>>>> 03429261b8644fb86db73bfe784c56af70b2c552
 --- !u!61 &1255037361
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -834,8 +868,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 1255037364}
+<<<<<<< HEAD
   speed: 5
   boxCol: {fileID: 1255037361}
+=======
+>>>>>>> 03429261b8644fb86db73bfe784c56af70b2c552
 --- !u!1 &1877857823
 GameObject:
   m_ObjectHideFlags: 0
@@ -920,6 +957,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
 --- !u!1 &1983811438
 GameObject:
   m_ObjectHideFlags: 0
@@ -1142,3 +1180,5 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+=======
+>>>>>>> 03429261b8644fb86db73bfe784c56af70b2c552
