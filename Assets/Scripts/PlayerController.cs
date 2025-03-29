@@ -1,18 +1,28 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class PlayerController : MonoBehaviour
 {
     private float horizontalInput, verticalInput;
     public Animator animator;
     public float speed = 5f;
+    public float jumpForce = 25f;
     public BoxCollider2D boxCol;
+    private Rigidbody2D rd2d;
 
     private Vector2 boxColInitSize;
     private Vector2 boxColInitOffset;
+
+    private void Awake()
+    {
+        Debug.Log("Player Controller awake");
+        rd2d = GetComponent<Rigidbody2D>();
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -25,10 +35,13 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         GetInput();
+        CrouchAnimantion();
+        PlayMovementAnimation(horizontalInput, verticalInput);
+        MovePlayer(horizontalInput, verticalInput);
+    }
 
-
-        PlayJumpAnimation(verticalInput);
-
+    private void CrouchAnimantion()
+    {
         if (Input.GetKey(KeyCode.LeftControl))
         {
             Crouch(true);
@@ -37,14 +50,23 @@ public class PlayerController : MonoBehaviour
         {
             Crouch(false);
         }
+    }
 
-        PlayRunWalkOrIdleAnimation(horizontalInput);
-  
+    private void MovePlayer(float horizontal, float vertical)
+    {
+        Vector3 position = transform.position;
+        position.x += horizontal* speed * Time.deltaTime;
+        transform.position = position;
+
+        if (verticalInput > 0)
+        {
+            rd2d.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Force);
+        }
     }
 
     public void Crouch(bool crouch)
     {
-        if (crouch == true)
+        if (crouch)
         {
             float offX = -0.0978f;
             float offY = 0.5947f;
@@ -64,15 +86,13 @@ public class PlayerController : MonoBehaviour
         animator.SetBool("Crouch", crouch);
     }
 
-    private float GetInput()
+    private void GetInput()
     {
         horizontalInput = Input.GetAxis("Horizontal");
         verticalInput = Input.GetAxis("Vertical");
-        Debug.Log($"horizontal: {horizontalInput}, vertical: {verticalInput}");
-        return Mathf.Max(horizontalInput, verticalInput);
     }
 
-    private void PlayRunWalkOrIdleAnimation(float horizontal)
+    private void PlayMovementAnimation(float horizontal, float vertical)
     {
         Vector3 scale = transform.localScale;
         if (horizontal < 0)
@@ -86,13 +106,11 @@ public class PlayerController : MonoBehaviour
         transform.localScale = scale;
 
         animator.SetFloat("Speed", Mathf.Abs(horizontal));
-    }
 
-    public void PlayJumpAnimation(float vertical)
-    {
         if (vertical > 0)
         {
             animator.SetTrigger("Jump");
         }
     }
+
 }

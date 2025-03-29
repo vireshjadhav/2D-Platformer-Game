@@ -835,6 +835,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 1255037364}
   speed: 5
+  jumpForce: 1
   boxCol: {fileID: 1255037361}
 --- !u!1 &1877857823
 GameObject:
