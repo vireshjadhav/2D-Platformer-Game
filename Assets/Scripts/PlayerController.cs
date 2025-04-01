@@ -8,12 +8,15 @@ using UnityEngine.UIElements;
 
 public class PlayerController : MonoBehaviour
 {
+    [SerializeField] private Rigidbody2D rd2d;
+    [SerializeField] private Animator animator;
+    [SerializeField] private float jumpForce = 25f;
+
     private float horizontalInput, verticalInput;
-    public Animator animator;
     public float speed = 5f;
-    public float jumpForce = 25f;
     public BoxCollider2D boxCol;
-    private Rigidbody2D rd2d;
+    private bool crouch = false;
+    private bool isGrounded = false;
 
     private Vector2 boxColInitSize;
     private Vector2 boxColInitOffset;
@@ -38,15 +41,41 @@ public class PlayerController : MonoBehaviour
         CrouchAnimantion();
         PlayMovementAnimation(horizontalInput, verticalInput);
         MovePlayer(horizontalInput, verticalInput);
+        MovePlayerVertically(verticalInput);
+    }
+
+    public void MovePlayerVertically(float vertical)
+    {
+        if (vertical > 0 && isGrounded)
+        {
+            animator.SetTrigger("Jump");
+            rd2d.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
+        }
+    }
+
+    private void OnCollisionStay2D(Collision2D other)
+    {
+        if(other.transform.tag == "Platform")
+        {
+            isGrounded = true;
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D other)
+    {
+        if (other.transform.tag == "Platform")
+        {
+            isGrounded = false;
+        }
     }
 
     private void CrouchAnimantion()
     {
-        if (Input.GetKey(KeyCode.LeftControl))
+        if (Input.GetKeyDown(KeyCode.LeftControl))
         {
             Crouch(true);
         }
-        else
+        else if (Input.GetKeyUp(KeyCode.LeftControl))
         {
             Crouch(false);
         }
@@ -57,11 +86,6 @@ public class PlayerController : MonoBehaviour
         Vector3 position = transform.position;
         position.x += horizontal* speed * Time.deltaTime;
         transform.position = position;
-
-        if (verticalInput > 0)
-        {
-            rd2d.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Force);
-        }
     }
 
     public void Crouch(bool crouch)
@@ -83,13 +107,14 @@ public class PlayerController : MonoBehaviour
             boxCol.offset = boxColInitOffset;
         }
 
+        this.crouch = crouch;
         animator.SetBool("Crouch", crouch);
     }
 
     private void GetInput()
     {
         horizontalInput = Input.GetAxis("Horizontal");
-        verticalInput = Input.GetAxis("Vertical");
+        verticalInput = Input.GetAxisRaw("Vertical");
     }
 
     private void PlayMovementAnimation(float horizontal, float vertical)
