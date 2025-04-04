@@ -5,6 +5,7 @@ using System.Runtime.CompilerServices;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.Analytics;
+using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 
 public class PlayerController : MonoBehaviour
@@ -62,6 +63,8 @@ public class PlayerController : MonoBehaviour
         if(other.gameObject.CompareTag("PlayerDeath"))
         {
             PlayerDied();
+            int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+            SceneManager.LoadScene(currentSceneIndex);
         }
     }
 
@@ -85,6 +88,7 @@ public class PlayerController : MonoBehaviour
             isGrounded = false;
         }
     }
+
 
 
     private void CrouchAnimantion()
