@@ -181,6 +181,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 100, y: 1.5}
   m_EdgeRadius: 0
+<<<<<<< HEAD
 --- !u!1001 &99826886
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -256,6 +257,8 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 99826886}
   m_PrefabAsset: {fileID: 0}
+=======
+>>>>>>> 032d29d2d43a57dcdbfc8a6b4b23d99684481094
 --- !u!1 &126459050
 GameObject:
   m_ObjectHideFlags: 0
@@ -407,8 +410,11 @@ Transform:
   - {fileID: 1369797761}
   - {fileID: 1114442204}
   - {fileID: 1414291267}
+<<<<<<< HEAD
   - {fileID: 99826887}
   - {fileID: 1737941267}
+=======
+>>>>>>> 032d29d2d43a57dcdbfc8a6b4b23d99684481094
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -660,7 +666,11 @@ PrefabInstance:
     - target: {fileID: 8190867047340317885, guid: f627f0d5518cf394caf097125f79d7cc,
         type: 3}
       propertyPath: m_LocalPosition.y
+<<<<<<< HEAD
       value: -3.5
+=======
+      value: -4.58
+>>>>>>> 032d29d2d43a57dcdbfc8a6b4b23d99684481094
       objectReference: {fileID: 0}
     - target: {fileID: 8190867047340317885, guid: f627f0d5518cf394caf097125f79d7cc,
         type: 3}

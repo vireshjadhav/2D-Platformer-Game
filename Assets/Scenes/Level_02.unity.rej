@@ -1,0 +1,9 @@
+diff a/Assets/Scenes/Level_02.unity b/Assets/Scenes/Level_02.unity	(rejected hunks)
+@@ -181,6 +181,7 @@
+   serializedVersion: 2
+   m_Size: {x: 100, y: 1.5}
+   m_EdgeRadius: 0
++<<<<<<< HEAD
+ --- !u!1001 &99826886
+ PrefabInstance:
+   m_ObjectHideFlags: 0
