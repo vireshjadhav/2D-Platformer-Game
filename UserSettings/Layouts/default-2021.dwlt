@@ -14,16 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_PixelRect:
     serializedVersion: 2
-    x: 8
-    y: 51
-    width: 2544
-    height: 1333
+    x: 0
+    y: 43
+    width: 2560
+    height: 1349
   m_ShowMode: 4
-  m_Title: Console
+  m_Title: Game
   m_RootView: {fileID: 4}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
-  m_Maximized: 0
+  m_Maximized: 1
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -42,12 +42,17 @@ MonoBehaviour:
     x: 0
     y: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     width: 784
     height: 959
 =======
     width: 1041
     height: 971
 >>>>>>> 032d29d2d43a57dcdbfc8a6b4b23d99684481094
+=======
+    width: 1042
+    height: 971
+>>>>>>> parent of f23afe9 (added a key to be picked up by the player to increase the score)
   m_MinSize: {x: 201, y: 221}
   m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 16}
@@ -75,16 +80,20 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1733
-    height: 959
+    width: 1744
+    height: 971
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
+<<<<<<< HEAD
 <<<<<<< HEAD
   controlID: 128
 =======
   controlID: 198
 >>>>>>> 032d29d2d43a57dcdbfc8a6b4b23d99684481094
+=======
+  controlID: 111
+>>>>>>> parent of f23afe9 (added a key to be picked up by the player to increase the score)
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -105,8 +114,8 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 2544
-    height: 1333
+    width: 2560
+    height: 1349
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
   m_UseTopView: 1
@@ -130,7 +139,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 2544
+    width: 2560
     height: 30
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
@@ -151,8 +160,8 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 1313
-    width: 2544
+    y: 1329
+    width: 2560
     height: 20
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
@@ -176,16 +185,20 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 30
-    width: 2544
-    height: 1283
+    width: 2560
+    height: 1299
   m_MinSize: {x: 400, y: 200}
   m_MaxSize: {x: 32384, y: 16192}
   vertical: 0
+<<<<<<< HEAD
 <<<<<<< HEAD
   controlID: 126
 =======
   controlID: 196
 >>>>>>> 032d29d2d43a57dcdbfc8a6b4b23d99684481094
+=======
+  controlID: 109
+>>>>>>> parent of f23afe9 (added a key to be picked up by the player to increase the score)
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -205,16 +218,20 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1733
-    height: 1283
+    width: 1744
+    height: 1299
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
+<<<<<<< HEAD
 <<<<<<< HEAD
   controlID: 127
 =======
   controlID: 197
 >>>>>>> 032d29d2d43a57dcdbfc8a6b4b23d99684481094
+=======
+  controlID: 110
+>>>>>>> parent of f23afe9 (added a key to be picked up by the player to increase the score)
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -231,6 +248,7 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
     x: 784
     y: 0
     width: 949
@@ -241,6 +259,12 @@ MonoBehaviour:
     width: 703
     height: 971
 >>>>>>> 032d29d2d43a57dcdbfc8a6b4b23d99684481094
+=======
+    x: 1042
+    y: 0
+    width: 702
+    height: 971
+>>>>>>> parent of f23afe9 (added a key to be picked up by the player to increase the score)
   m_MinSize: {x: 202, y: 221}
   m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 18}
@@ -265,9 +289,9 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 959
-    width: 1733
-    height: 324
+    y: 971
+    width: 1744
+    height: 328
   m_MinSize: {x: 101, y: 121}
   m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 19}
@@ -291,11 +315,16 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 1733
+    x: 1744
     y: 0
+<<<<<<< HEAD
 <<<<<<< HEAD
     width: 434
     height: 1283
+=======
+    width: 437
+    height: 1299
+>>>>>>> parent of f23afe9 (added a key to be picked up by the player to increase the score)
   m_MinSize: {x: 277, y: 71}
   m_MaxSize: {x: 4002, y: 4021}
 =======
@@ -326,18 +355,22 @@ MonoBehaviour:
   - {fileID: 14}
   m_Position:
     serializedVersion: 2
-    x: 2167
+    x: 2181
     y: 0
-    width: 377
-    height: 1283
+    width: 379
+    height: 1299
   m_MinSize: {x: 100, y: 200}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
+<<<<<<< HEAD
 <<<<<<< HEAD
   controlID: 58
 =======
   controlID: 174
 >>>>>>> 032d29d2d43a57dcdbfc8a6b4b23d99684481094
+=======
+  controlID: 60
+>>>>>>> parent of f23afe9 (added a key to be picked up by the player to increase the score)
 --- !u!114 &13
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -356,8 +389,13 @@ MonoBehaviour:
     x: 0
     y: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     width: 377
     height: 752
+=======
+    width: 379
+    height: 761
+>>>>>>> parent of f23afe9 (added a key to be picked up by the player to increase the score)
   m_MinSize: {x: 201, y: 221}
   m_MaxSize: {x: 4001, y: 4021}
 =======
@@ -387,9 +425,9 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 752
-    width: 377
-    height: 531
+    y: 761
+    width: 379
+    height: 538
   m_MinSize: {x: 231, y: 271}
   m_MaxSize: {x: 10001, y: 10021}
   m_ActualView: {fileID: 23}
@@ -417,9 +455,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 789
+    x: 1042
     y: 73
-    width: 953
+    width: 700
     height: 950
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
@@ -430,7 +468,7 @@ MonoBehaviour:
     m_CachedPref: 50
     m_ControlHash: 1964396721
     m_PrefName: Preview_TilemapBrushInspector
-  m_Palette: {fileID: 9176918620369211013, guid: 01f74da66ac21674d925e5187c2736b1,
+  m_Palette: {fileID: 6157093207481566201, guid: 527639a3ad5552d4b95517af821ba451,
     type: 3}
   m_DrawGridGizmo: 1
   m_DrawGizmos: 1
@@ -456,6 +494,7 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
     x: 8
     y: 81
     width: 783
@@ -466,6 +505,12 @@ MonoBehaviour:
     width: 1040
     height: 950
 >>>>>>> 032d29d2d43a57dcdbfc8a6b4b23d99684481094
+=======
+    x: 0
+    y: 73
+    width: 1041
+    height: 950
+>>>>>>> parent of f23afe9 (added a key to be picked up by the player to increase the score)
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -724,6 +769,7 @@ MonoBehaviour:
   m_AudioPlay: 0
   m_Position:
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_Target: {x: 27.586607, y: 5.6135693, z: -0.007951108}
     speed: 2
     m_Value: {x: 27.586607, y: 5.6135693, z: -0.007951108}
@@ -732,6 +778,11 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 9.349822, y: 3.6353056, z: 0.72800595}
 >>>>>>> 032d29d2d43a57dcdbfc8a6b4b23d99684481094
+=======
+    m_Target: {x: 17.853289, y: 2.1913087, z: 0.54865515}
+    speed: 2
+    m_Value: {x: 17.853289, y: 2.1913087, z: 0.54865515}
+>>>>>>> parent of f23afe9 (added a key to be picked up by the player to increase the score)
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -783,6 +834,7 @@ MonoBehaviour:
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_Target: 1.5092528
     speed: 2
     m_Value: 1.5092528
@@ -791,6 +843,11 @@ MonoBehaviour:
     speed: 2
     m_Value: 12.59743
 >>>>>>> 032d29d2d43a57dcdbfc8a6b4b23d99684481094
+=======
+    m_Target: 15.369752
+    speed: 2
+    m_Value: 15.369752
+>>>>>>> parent of f23afe9 (added a key to be picked up by the player to increase the score)
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -836,10 +893,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 8
-    y: 81
-    width: 783
-    height: 938
+    x: 0
+    y: 73
+    width: 900
+    height: 950
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -848,32 +905,15 @@ MonoBehaviour:
   m_ViewTransforms:
     m_KeySerializationHelper:
     - {fileID: -3811622452762214060, guid: e53b98cae1a9ec947a730169f8eda2bb, type: 2}
-    - {fileID: 8709663075558745901, guid: 01c4bb9da42d5824981df0cc992fcb58, type: 2}
     m_ValueSerializationHelper:
-    - e00: 0.37711865
+    - e00: 0.8251837
       e01: 0
       e02: 0
-      e03: 82.88135
+      e03: 0.0018005371
       e10: 0
-      e11: 0.37711865
+      e11: 0.8251837
       e12: 0
-      e13: 228.88559
-      e20: 0
-      e21: 0
-      e22: 1
-      e23: 0
-      e30: 0
-      e31: 0
-      e32: 0
-      e33: 1
-    - e00: 0.5369858
-      e01: 0
-      e02: 0
-      e03: -24.536163
-      e10: 0
-      e11: 0.5369858
-      e12: 0
-      e13: 432.66248
+      e13: -16.750916
       e20: 0
       e21: 0
       e22: 1
@@ -922,6 +962,7 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
     x: 792
     y: 81
     width: 947
@@ -932,6 +973,12 @@ MonoBehaviour:
     width: 701
     height: 950
 >>>>>>> 032d29d2d43a57dcdbfc8a6b4b23d99684481094
+=======
+    x: 1042
+    y: 73
+    width: 700
+    height: 950
+>>>>>>> parent of f23afe9 (added a key to be picked up by the player to increase the score)
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -967,7 +1014,7 @@ MonoBehaviour:
     m_VAllowExceedBaseRangeMin: 1
     m_VAllowExceedBaseRangeMax: 1
     m_ScaleWithWindow: 0
-    m_HSlider: 0
+    m_HSlider: 1
     m_VSlider: 0
     m_IgnoreScrollWheelUntilClicked: 0
     m_EnableMouseInput: 1
@@ -980,6 +1027,7 @@ MonoBehaviour:
       x: 0
       y: 21
 <<<<<<< HEAD
+<<<<<<< HEAD
       width: 947
       height: 917
     m_Scale: {x: 0.49322918, y: 0.49322918}
@@ -990,12 +1038,19 @@ MonoBehaviour:
     m_Scale: {x: 0.560613, y: 0.560613}
     m_Translation: {x: 229.66132, y: 464.5}
 >>>>>>> 032d29d2d43a57dcdbfc8a6b4b23d99684481094
+=======
+      width: 700
+      height: 929
+    m_Scale: {x: 0.5606129, y: 0.5606129}
+    m_Translation: {x: 292.79303, y: 464.5}
+>>>>>>> parent of f23afe9 (added a key to be picked up by the player to increase the score)
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
+<<<<<<< HEAD
 <<<<<<< HEAD
       x: -960
       y: -929.58813
@@ -1013,6 +1068,15 @@ MonoBehaviour:
   m_defaultScale: 0.36510417
   m_LastWindowPixelSize: {x: 701, y: 950}
 >>>>>>> 032d29d2d43a57dcdbfc8a6b4b23d99684481094
+=======
+      x: -522.2731
+      y: -828.55743
+      width: 1248.6334
+      height: 1657.1149
+    m_MinimalGUI: 1
+  m_defaultScale: 0.36458334
+  m_LastWindowPixelSize: {x: 700, y: 950}
+>>>>>>> parent of f23afe9 (added a key to be picked up by the player to increase the score)
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000000000000
@@ -1039,10 +1103,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 8
-    y: 1040
-    width: 1732
-    height: 303
+    x: 0
+    y: 1044
+    width: 1743
+    height: 307
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -1071,7 +1135,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 1044
-    width: 1743
+    width: 1873
     height: 307
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
@@ -1080,7 +1144,7 @@ MonoBehaviour:
     m_OverlaysVisible: 1
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: 21110
+  m_LastSelectedObjectID: -10692
 --- !u!114 &21
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -1102,10 +1166,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1741
-    y: 81
-    width: 432
-    height: 1262
+    x: 1744
+    y: 73
+    width: 435
+    height: 1278
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -1145,10 +1209,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 2175
-    y: 81
-    width: 376
-    height: 731
+    x: 2181
+    y: 73
+    width: 378
+    height: 740
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -1158,6 +1222,7 @@ MonoBehaviour:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
       m_SelectedIDs: 
       m_LastClickedID: 0
       m_ExpandedIDs: 2efbffff
@@ -1166,6 +1231,11 @@ MonoBehaviour:
       m_LastClickedID: 0
       m_ExpandedIDs: 98eaffff34edffff2eeeffff34efffff70f0ffff36f1ffff5af2ffff46f3ffff38f4ffff3af4ffff3af6ffffbaf6ffffb8f8ffffb4f9ffffa4faffff125a0000
 >>>>>>> 032d29d2d43a57dcdbfc8a6b4b23d99684481094
+=======
+      m_SelectedIDs: 54bcffff
+      m_LastClickedID: 0
+      m_ExpandedIDs: 68bfffff42c5ffffa8c5ffff06c6ffffbec9ffff9ccafffff0cdffff60ceffff86cffffffad1ffffe2d2ffff4ad3ffff54d6ffff18d8ffff40d9ffff80dbffff20dcffffcedeffff32dfffffb2e1ffff94e2ffff2ee3ffffa6e4ffff76e6ffff0ee8ffff92e9ffff84eaffffd0f0ffff78f3ffffe2f3ffff50f5ffffc2f6ffff32f7ffffc6f7ffff2efbffff3c8b0000cc910000f2920000
+>>>>>>> parent of f23afe9 (added a key to be picked up by the player to increase the score)
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1210,10 +1280,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 2175
-    y: 833
-    width: 376
-    height: 510
+    x: 2181
+    y: 834
+    width: 378
+    height: 517
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -1231,8 +1301,7 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SkipHidden: 0
     m_SearchArea: 1
-    m_Folders:
-    - Assets/Scripts
+    m_Folders: []
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 0
@@ -1248,10 +1317,14 @@ MonoBehaviour:
     m_SelectedIDs: 6c9a0000
     m_LastClickedID: 39532
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_ExpandedIDs: 000000002c5300000456000006560000085600000a5600000c5600000e56000010560000125600001456000016560000185600001a5600001c5600001e56000020560000
 =======
     m_ExpandedIDs: 00000000f651000000ca9a3b
 >>>>>>> 032d29d2d43a57dcdbfc8a6b4b23d99684481094
+=======
+    m_ExpandedIDs: 000000007054000050550000525500005455000056550000585500005a5500005c5500005e55000060550000625500006455000066550000685500006a5500006c550000
+>>>>>>> parent of f23afe9 (added a key to be picked up by the player to increase the score)
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1277,6 +1350,7 @@ MonoBehaviour:
       m_ResourceFile: 
   m_AssetTreeState:
 <<<<<<< HEAD
+<<<<<<< HEAD
     scrollPos: {x: 0, y: 992}
     m_SelectedIDs: 
     m_LastClickedID: 0
@@ -1287,6 +1361,12 @@ MonoBehaviour:
     m_LastClickedID: 0
     m_ExpandedIDs: ffffffff00000000f6510000f85100000c5200000e520000105200001652000000ca9a3b
 >>>>>>> 032d29d2d43a57dcdbfc8a6b4b23d99684481094
+=======
+    scrollPos: {x: 0, y: 1689}
+    m_SelectedIDs: 
+    m_LastClickedID: 0
+    m_ExpandedIDs: ffffffff000000007054000050550000525500005455000056550000585500005a5500005c5500005e55000060550000625500006455000066550000685500006a5500006c5500006c8d0000
+>>>>>>> parent of f23afe9 (added a key to be picked up by the player to increase the score)
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 

@@ -15,7 +15,6 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float jumpForce = 25f;
 
     private float horizontalInput, verticalInput;
-    public ScoreController scoreController;
 
     public LevelOverController levelOverController;
     public float speed = 5f;
@@ -154,11 +153,5 @@ public class PlayerController : MonoBehaviour
         transform.localScale = scale;
 
         animator.SetFloat("Speed", Mathf.Abs(horizontal));
-    }
-
-    internal void PickUpKey()
-    {
-        Debug.Log("Player Picked Up the Key");
-        scoreController.IncreaseScore(10);
     }
 }

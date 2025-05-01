@@ -173,6 +173,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 32173919}
+<<<<<<< HEAD
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -510,14 +511,17 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 272823757}
+=======
+>>>>>>> parent of f23afe9 (added a key to be picked up by the player to increase the score)
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
 <<<<<<< HEAD
 --- !u!4 &522994444 stripped
 Transform:
@@ -541,12 +545,16 @@ Transform:
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &575159070
 >>>>>>> 032d29d2d43a57dcdbfc8a6b4b23d99684481094
+=======
+--- !u!1001 &405307069
+>>>>>>> parent of f23afe9 (added a key to be picked up by the player to increase the score)
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 1619928232}
+    m_TransformParent: {fileID: 0}
     m_Modifications:
+<<<<<<< HEAD
 <<<<<<< HEAD
     - target: {fileID: 8190867047340317884, guid: f627f0d5518cf394caf097125f79d7cc,
         type: 3}
@@ -578,75 +586,120 @@ PrefabInstance:
       propertyPath: m_Name
       value: Key (3)
 >>>>>>> 032d29d2d43a57dcdbfc8a6b4b23d99684481094
+=======
+    - target: {fileID: 1255037365, guid: 6e00766903ca79c429a33530d6ad25d1, type: 3}
+      propertyPath: jumpForce
+      value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 8190867047340317885, guid: f627f0d5518cf394caf097125f79d7cc,
+    - target: {fileID: 1255037365, guid: 6e00766903ca79c429a33530d6ad25d1, type: 3}
+      propertyPath: levelManager
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1255037365, guid: 6e00766903ca79c429a33530d6ad25d1, type: 3}
+      propertyPath: levelOverController
+      value: 
+      objectReference: {fileID: 5856803563580827348}
+    - target: {fileID: 1877857826, guid: 6e00766903ca79c429a33530d6ad25d1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4792002413901235725, guid: 6e00766903ca79c429a33530d6ad25d1,
+        type: 3}
+      propertyPath: m_Name
+      value: Player
+>>>>>>> parent of f23afe9 (added a key to be picked up by the player to increase the score)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4792002413901235725, guid: 6e00766903ca79c429a33530d6ad25d1,
+        type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 5644355427627704005, guid: 6e00766903ca79c429a33530d6ad25d1,
         type: 3}
       propertyPath: m_RootOrder
+<<<<<<< HEAD
 <<<<<<< HEAD
       value: 6
 =======
       value: 8
 >>>>>>> 032d29d2d43a57dcdbfc8a6b4b23d99684481094
+=======
+      value: 0
+>>>>>>> parent of f23afe9 (added a key to be picked up by the player to increase the score)
       objectReference: {fileID: 0}
-    - target: {fileID: 8190867047340317885, guid: f627f0d5518cf394caf097125f79d7cc,
+    - target: {fileID: 5644355427627704005, guid: 6e00766903ca79c429a33530d6ad25d1,
         type: 3}
       propertyPath: m_LocalPosition.x
+<<<<<<< HEAD
 <<<<<<< HEAD
       value: 23.52
 =======
       value: 72.79
 >>>>>>> 032d29d2d43a57dcdbfc8a6b4b23d99684481094
+=======
+      value: 0
+>>>>>>> parent of f23afe9 (added a key to be picked up by the player to increase the score)
       objectReference: {fileID: 0}
-    - target: {fileID: 8190867047340317885, guid: f627f0d5518cf394caf097125f79d7cc,
+    - target: {fileID: 5644355427627704005, guid: 6e00766903ca79c429a33530d6ad25d1,
         type: 3}
       propertyPath: m_LocalPosition.y
+<<<<<<< HEAD
 <<<<<<< HEAD
       value: 5.87
 =======
       value: 2.28
 >>>>>>> 032d29d2d43a57dcdbfc8a6b4b23d99684481094
+=======
+      value: -2.5
+>>>>>>> parent of f23afe9 (added a key to be picked up by the player to increase the score)
       objectReference: {fileID: 0}
-    - target: {fileID: 8190867047340317885, guid: f627f0d5518cf394caf097125f79d7cc,
+    - target: {fileID: 5644355427627704005, guid: 6e00766903ca79c429a33530d6ad25d1,
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8190867047340317885, guid: f627f0d5518cf394caf097125f79d7cc,
+    - target: {fileID: 5644355427627704005, guid: 6e00766903ca79c429a33530d6ad25d1,
         type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 8190867047340317885, guid: f627f0d5518cf394caf097125f79d7cc,
+    - target: {fileID: 5644355427627704005, guid: 6e00766903ca79c429a33530d6ad25d1,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8190867047340317885, guid: f627f0d5518cf394caf097125f79d7cc,
+    - target: {fileID: 5644355427627704005, guid: 6e00766903ca79c429a33530d6ad25d1,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8190867047340317885, guid: f627f0d5518cf394caf097125f79d7cc,
+    - target: {fileID: 5644355427627704005, guid: 6e00766903ca79c429a33530d6ad25d1,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8190867047340317885, guid: f627f0d5518cf394caf097125f79d7cc,
+    - target: {fileID: 5644355427627704005, guid: 6e00766903ca79c429a33530d6ad25d1,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8190867047340317885, guid: f627f0d5518cf394caf097125f79d7cc,
+    - target: {fileID: 5644355427627704005, guid: 6e00766903ca79c429a33530d6ad25d1,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8190867047340317885, guid: f627f0d5518cf394caf097125f79d7cc,
+    - target: {fileID: 5644355427627704005, guid: 6e00766903ca79c429a33530d6ad25d1,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9217905120002205568, guid: 6e00766903ca79c429a33530d6ad25d1,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
+<<<<<<< HEAD
   m_SourcePrefab: {fileID: 100100000, guid: f627f0d5518cf394caf097125f79d7cc, type: 3}
 <<<<<<< HEAD
 --- !u!4 &688720978 stripped
@@ -668,6 +721,9 @@ Transform:
   m_PrefabInstance: {fileID: 1861517813}
 >>>>>>> 032d29d2d43a57dcdbfc8a6b4b23d99684481094
   m_PrefabAsset: {fileID: 0}
+=======
+  m_SourcePrefab: {fileID: 100100000, guid: 6e00766903ca79c429a33530d6ad25d1, type: 3}
+>>>>>>> parent of f23afe9 (added a key to be picked up by the player to increase the score)
 --- !u!1 &1056584341
 GameObject:
   m_ObjectHideFlags: 0
@@ -719,12 +775,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1056584341}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 74.18, y: 3.42, z: 0.073530555}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1619928232}
+  m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1056584344
@@ -741,6 +797,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentSceneIndex: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!4 &1298558684 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8190867047340317885, guid: f627f0d5518cf394caf097125f79d7cc,
@@ -754,6 +811,8 @@ Transform:
   m_PrefabInstance: {fileID: 1502839196}
 >>>>>>> 032d29d2d43a57dcdbfc8a6b4b23d99684481094
   m_PrefabAsset: {fileID: 0}
+=======
+>>>>>>> parent of f23afe9 (added a key to be picked up by the player to increase the score)
 --- !u!1 &1426410370
 GameObject:
   m_ObjectHideFlags: 0
@@ -4309,6 +4368,7 @@ Tilemap:
     e32: 0
     e33: 1
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!4 &1563098638 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8190867047340317885, guid: f627f0d5518cf394caf097125f79d7cc,
@@ -4406,6 +4466,8 @@ PrefabInstance:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f627f0d5518cf394caf097125f79d7cc, type: 3}
 >>>>>>> 032d29d2d43a57dcdbfc8a6b4b23d99684481094
+=======
+>>>>>>> parent of f23afe9 (added a key to be picked up by the player to increase the score)
 --- !u!1 &1585909134
 GameObject:
   m_ObjectHideFlags: 0
@@ -5386,7 +5448,7 @@ GameObject:
   - component: {fileID: 1619928232}
   - component: {fileID: 1619928231}
   m_Layer: 0
-  m_Name: Level
+  m_Name: Grid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5418,6 +5480,7 @@ Transform:
   m_Children:
   - {fileID: 1585909135}
   - {fileID: 1426410371}
+<<<<<<< HEAD
   - {fileID: 1056584343}
   - {fileID: 32173921}
   - {fileID: 5856803563580827349}
@@ -5433,9 +5496,12 @@ Transform:
   - {fileID: 1382782106}
   - {fileID: 823708016}
 >>>>>>> 032d29d2d43a57dcdbfc8a6b4b23d99684481094
+=======
+>>>>>>> parent of f23afe9 (added a key to be picked up by the player to increase the score)
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
 --- !u!1 &1691598081
 GameObject:
   m_ObjectHideFlags: 0
@@ -5978,13 +6044,20 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f627f0d5518cf394caf097125f79d7cc, type: 3}
+=======
+>>>>>>> parent of f23afe9 (added a key to be picked up by the player to increase the score)
 --- !u!1001 &5856803563580827347
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 1619928232}
+    m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1962500049851972013, guid: 8008960c6a2e46845bf5ede1f9efa144,
+        type: 3}
+      propertyPath: currentSceneIndex
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5149222662917202305, guid: 8008960c6a2e46845bf5ede1f9efa144,
         type: 3}
       propertyPath: m_Name
@@ -6018,17 +6091,17 @@ PrefabInstance:
     - target: {fileID: 5380425463007499205, guid: 8008960c6a2e46845bf5ede1f9efa144,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5380425463007499205, guid: 8008960c6a2e46845bf5ede1f9efa144,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5380425463007499205, guid: 8008960c6a2e46845bf5ede1f9efa144,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5380425463007499205, guid: 8008960c6a2e46845bf5ede1f9efa144,
         type: 3}
@@ -6047,13 +6120,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8008960c6a2e46845bf5ede1f9efa144, type: 3}
---- !u!4 &5856803563580827349 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5380425463007499205, guid: 8008960c6a2e46845bf5ede1f9efa144,
-    type: 3}
-  m_PrefabInstance: {fileID: 5856803563580827347}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &5856803563580827350 stripped
+--- !u!114 &5856803563580827348 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1962500049851972013, guid: 8008960c6a2e46845bf5ede1f9efa144,
     type: 3}

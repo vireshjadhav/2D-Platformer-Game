@@ -10,6 +10,7 @@ EditorUserSettings:
       flags: 0
     RecentlyUsedSceneGuid-1:
 <<<<<<< HEAD
+<<<<<<< HEAD
       value: 0108570500005f08595d0f7143745d4417151a292f2c24672b7c4e66e0b1353c
       flags: 0
     RecentlyUsedSceneGuid-2:
@@ -23,9 +24,15 @@ EditorUserSettings:
     RecentlyUsedSceneGuid-3:
       value: 5409010453055a0a550b5c20437a0744444e4b732a7a2767797c4a63b2e5326b
 >>>>>>> 032d29d2d43a57dcdbfc8a6b4b23d99684481094
+=======
+      value: 5409010453055a0a550b5c20437a0744444e4b732a7a2767797c4a63b2e5326b
+      flags: 0
+    RecentlyUsedSceneGuid-2:
+      value: 0108570500005f08595d0f7143745d4417151a292f2c24672b7c4e66e0b1353c
+>>>>>>> parent of f23afe9 (added a key to be picked up by the player to increase the score)
       flags: 0
     RecentlyUsedSceneGuid-3:
-      value: 5409010453055a0a550b5c20437a0744444e4b732a7a2767797c4a63b2e5326b
+      value: 5706040000575a0e0f595e72122209441215482b7d7a72347e2f4b66e4e3353e
       flags: 0
     vcSharedLogLevel:
       value: 0d5e400f0650
