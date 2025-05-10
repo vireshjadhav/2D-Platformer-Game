@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.Analytics;
+using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 
 public class PlayerController : MonoBehaviour
@@ -13,6 +15,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float jumpForce = 25f;
 
     private float horizontalInput, verticalInput;
+
+    public LevelOverController levelOverController;
     public float speed = 5f;
     public BoxCollider2D boxCol;
     private bool crouch = false;
@@ -49,25 +53,43 @@ public class PlayerController : MonoBehaviour
         if (vertical > 0 && isGrounded)
         {
             animator.SetTrigger("Jump");
+            Debug.Log("Jumping 1");
             rd2d.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
         }
     }
 
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if(other.gameObject.CompareTag("PlayerDeath"))
+        {
+            PlayerDied();
+            int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+            SceneManager.LoadScene(currentSceneIndex);
+        }
+    }
+
+    private void PlayerDied()
+    {
+        Destroy(gameObject);
+    }
+
     private void OnCollisionStay2D(Collision2D other)
     {
-        if(other.transform.tag == "Platform")
-        {
-            isGrounded = true;
-        }
+            if(other.transform.tag == "Ground")
+            {
+                isGrounded = true;
+            }
     }
 
     private void OnCollisionExit2D(Collision2D other)
     {
-        if (other.transform.tag == "Platform")
+        if (other.transform.tag == "Ground")
         {
             isGrounded = false;
         }
     }
+
+
 
     private void CrouchAnimantion()
     {
@@ -131,11 +153,5 @@ public class PlayerController : MonoBehaviour
         transform.localScale = scale;
 
         animator.SetFloat("Speed", Mathf.Abs(horizontal));
-
-        if (vertical > 0)
-        {
-            animator.SetTrigger("Jump");
-        }
     }
-
 }
