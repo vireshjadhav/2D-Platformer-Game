@@ -66,6 +66,11 @@ public class PlayerController : MonoBehaviour
             int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
             SceneManager.LoadScene(currentSceneIndex);
         }
+
+        if (other.transform.tag == "Ground")
+        {
+            isGrounded = true;
+        }
     }
 
     private void PlayerDied()
@@ -73,13 +78,13 @@ public class PlayerController : MonoBehaviour
         Destroy(gameObject);
     }
 
-    private void OnCollisionStay2D(Collision2D other)
-    {
-            if(other.transform.tag == "Ground")
-            {
-                isGrounded = true;
-            }
-    }
+    //private void OnCollisionEnter2D(Collision2D other)
+    //{
+    //        if(other.transform.tag == "Ground")
+    //        {
+    //            isGrounded = true;
+    //        }
+    //}
 
     private void OnCollisionExit2D(Collision2D other)
     {
