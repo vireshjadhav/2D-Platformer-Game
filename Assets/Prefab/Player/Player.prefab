@@ -98,6 +98,7 @@ GameObject:
   - component: {fileID: 1255037360}
   - component: {fileID: 1255037364}
   - component: {fileID: 1255037365}
+  - component: {fileID: 6782668049489171058}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -260,3 +261,20 @@ MonoBehaviour:
   speed: 5
   boxCol: {fileID: 1255037361}
   scoreController: {fileID: 0}
+--- !u!114 &6782668049489171058
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4792002413901235725}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ace1f1bbac35a34ab85f78fb75dcd6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hearts:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  playerController: {fileID: 1255037365}
