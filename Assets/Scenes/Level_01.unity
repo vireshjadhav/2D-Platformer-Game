@@ -660,9 +660,29 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1255037360, guid: 6e00766903ca79c429a33530d6ad25d1, type: 3}
+      propertyPath: m_Mass
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1255037360, guid: 6e00766903ca79c429a33530d6ad25d1, type: 3}
+      propertyPath: m_GravityScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1255037365, guid: 6e00766903ca79c429a33530d6ad25d1, type: 3}
+      propertyPath: rd2d
+      value: 
+      objectReference: {fileID: 1505307893}
+    - target: {fileID: 1255037365, guid: 6e00766903ca79c429a33530d6ad25d1, type: 3}
+      propertyPath: speed
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 1255037365, guid: 6e00766903ca79c429a33530d6ad25d1, type: 3}
       propertyPath: jumpForce
-      value: 4
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1255037365, guid: 6e00766903ca79c429a33530d6ad25d1, type: 3}
+      propertyPath: levelManager
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1255037365, guid: 6e00766903ca79c429a33530d6ad25d1, type: 3}
       propertyPath: scoreController
@@ -672,9 +692,18 @@ PrefabInstance:
       propertyPath: levelOverController
       value: 
       objectReference: {fileID: 5856803563580827348}
+    - target: {fileID: 1877857826, guid: 6e00766903ca79c429a33530d6ad25d1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.5
+      objectReference: {fileID: 0}
     - target: {fileID: 4792002413901235725, guid: 6e00766903ca79c429a33530d6ad25d1,
         type: 3}
       propertyPath: m_Name
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 4792002413901235725, guid: 6e00766903ca79c429a33530d6ad25d1,
+        type: 3}
+      propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 5644355427627704005, guid: 6e00766903ca79c429a33530d6ad25d1,
@@ -731,6 +760,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9217905120002205568, guid: 6e00766903ca79c429a33530d6ad25d1,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6e00766903ca79c429a33530d6ad25d1, type: 3}
@@ -4896,6 +4930,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6550598983382647541, guid: 3a150de4646cd2a47ba2a611cf3f84c3,
     type: 3}
   m_PrefabInstance: {fileID: 990303994}
+  m_PrefabAsset: {fileID: 0}
+--- !u!50 &1505307893 stripped
+Rigidbody2D:
+  m_CorrespondingSourceObject: {fileID: 1255037360, guid: 6e00766903ca79c429a33530d6ad25d1,
+    type: 3}
+  m_PrefabInstance: {fileID: 405307069}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &1524174039 stripped
 Transform:
