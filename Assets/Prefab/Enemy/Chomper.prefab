@@ -146,9 +146,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0865661d311fe3e49b404ac217042d75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  patrolSpeed: 1.4
-  pointA: {x: 9.01, y: -0.558, z: 0}
-  pointB: {x: 16.72, y: -0.558, z: 0}
-  currentScale: 1
+  patrolSpeed: 1
+  pointA: {x: 0, y: 0, z: 0}
+  pointB: {x: 0, y: 0, z: 0}
+  currentScaleX: 1
   animator: {fileID: 127229009063026859}
-  livesController: {fileID: 0}
