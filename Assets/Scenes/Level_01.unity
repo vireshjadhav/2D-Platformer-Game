@@ -692,6 +692,10 @@ PrefabInstance:
       propertyPath: levelOverController
       value: 
       objectReference: {fileID: 5856803563580827348}
+    - target: {fileID: 1877857823, guid: 6e00766903ca79c429a33530d6ad25d1, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 1877857826, guid: 6e00766903ca79c429a33530d6ad25d1, type: 3}
       propertyPath: m_LocalPosition.y
       value: 1.5
@@ -700,6 +704,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 4792002413901235725, guid: 6e00766903ca79c429a33530d6ad25d1,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4792002413901235725, guid: 6e00766903ca79c429a33530d6ad25d1,
         type: 3}
@@ -761,6 +770,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6782668049489171058, guid: 6e00766903ca79c429a33530d6ad25d1,
+        type: 3}
+      propertyPath: hearts.Array.data[0]
+      value: 
+      objectReference: {fileID: 57633305}
+    - target: {fileID: 6782668049489171058, guid: 6e00766903ca79c429a33530d6ad25d1,
+        type: 3}
+      propertyPath: hearts.Array.data[1]
+      value: 
+      objectReference: {fileID: 412396041}
+    - target: {fileID: 6782668049489171058, guid: 6e00766903ca79c429a33530d6ad25d1,
+        type: 3}
+      propertyPath: hearts.Array.data[2]
+      value: 
+      objectReference: {fileID: 824198949}
     - target: {fileID: 9217905120002205568, guid: 6e00766903ca79c429a33530d6ad25d1,
         type: 3}
       propertyPath: m_SortingOrder

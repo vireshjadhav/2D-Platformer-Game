@@ -2436,6 +2436,10 @@ PrefabInstance:
       propertyPath: currentScale
       value: -1
       objectReference: {fileID: 0}
+    - target: {fileID: 1524174040, guid: 9b878dec7c5ed1c479356af6a6a6ccc0, type: 3}
+      propertyPath: livesController
+      value: 
+      objectReference: {fileID: 2052141235}
     - target: {fileID: 127229009063026860, guid: 9b878dec7c5ed1c479356af6a6a6ccc0,
         type: 3}
       propertyPath: m_RootOrder
@@ -3474,6 +3478,10 @@ PrefabInstance:
       propertyPath: currentScale
       value: -1
       objectReference: {fileID: 0}
+    - target: {fileID: 1524174040, guid: 9b878dec7c5ed1c479356af6a6a6ccc0, type: 3}
+      propertyPath: livesController
+      value: 
+      objectReference: {fileID: 2052141235}
     - target: {fileID: 127229009063026860, guid: 9b878dec7c5ed1c479356af6a6a6ccc0,
         type: 3}
       propertyPath: m_RootOrder
