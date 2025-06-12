@@ -911,10 +911,13 @@ PrefabInstance:
       propertyPath: levelOverController
       value: 
       objectReference: {fileID: 5856803563580827348}
+<<<<<<< HEAD
     - target: {fileID: 1877857823, guid: 6e00766903ca79c429a33530d6ad25d1, type: 3}
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+=======
+>>>>>>> 2c11fb0fcfd36c8af2f4fa72a85f4768534830a7
     - target: {fileID: 1877857826, guid: 6e00766903ca79c429a33530d6ad25d1, type: 3}
       propertyPath: m_LocalPosition.y
       value: 1.5
@@ -926,11 +929,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4792002413901235725, guid: 6e00766903ca79c429a33530d6ad25d1,
         type: 3}
+<<<<<<< HEAD
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4792002413901235725, guid: 6e00766903ca79c429a33530d6ad25d1,
         type: 3}
+=======
+>>>>>>> 2c11fb0fcfd36c8af2f4fa72a85f4768534830a7
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
@@ -989,6 +995,7 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+<<<<<<< HEAD
     - target: {fileID: 6782668049489171058, guid: 6e00766903ca79c429a33530d6ad25d1,
         type: 3}
       propertyPath: hearts.Array.data[0]
@@ -1004,6 +1011,8 @@ PrefabInstance:
       propertyPath: hearts.Array.data[2]
       value: 
       objectReference: {fileID: 824198949}
+=======
+>>>>>>> 2c11fb0fcfd36c8af2f4fa72a85f4768534830a7
     - target: {fileID: 9217905120002205568, guid: 6e00766903ca79c429a33530d6ad25d1,
         type: 3}
       propertyPath: m_SortingOrder
