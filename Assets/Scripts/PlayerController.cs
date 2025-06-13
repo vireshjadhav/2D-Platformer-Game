@@ -59,6 +59,7 @@ public class PlayerController : MonoBehaviour
         {
             animator.SetTrigger("Jump");
             Debug.Log("Jumping 1");
+            rd2d.velocity = new Vector2(rd2d.velocity.x, 0f);
             rd2d.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
         }
     }

@@ -5316,6 +5316,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2052141234}
     - target: {fileID: 1255037365, guid: 6e00766903ca79c429a33530d6ad25d1, type: 3}
+      propertyPath: jumpForce
+      value: 75
+      objectReference: {fileID: 0}
+    - target: {fileID: 1255037365, guid: 6e00766903ca79c429a33530d6ad25d1, type: 3}
       propertyPath: levelManager
       value: 
       objectReference: {fileID: 0}
