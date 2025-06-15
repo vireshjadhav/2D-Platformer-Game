@@ -5,9 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Ground
-  - PlayerDeath
   - Collectibles
   - Enemy
+  - KillZone
   layers:
   - Default
   - TransparentFX
@@ -19,7 +19,7 @@ TagManager:
   - Player
   - Interactables
   - Enemy
-  - 
+  - KillZone
   - 
   - 
   - 

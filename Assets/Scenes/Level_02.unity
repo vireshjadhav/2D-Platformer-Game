@@ -133,9 +133,9 @@ GameObject:
   m_Component:
   - component: {fileID: 41603288}
   - component: {fileID: 41603289}
-  m_Layer: 8
-  m_Name: PlayerDeathCol
-  m_TagString: PlayerDeath
+  m_Layer: 10
+  m_Name: KillZoneCol
+  m_TagString: KillZone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -11,29 +11,40 @@ using UnityEngine.UIElements;
 
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField] private Rigidbody2D rd2d;
+    [Header("Reference")]
+    [SerializeField] private Rigidbody2D rb2d;
     [SerializeField] private Animator animator;
-    [SerializeField] private float jumpForce = 25f;
-
-    private float horizontalInput, verticalInput;
-
+    [SerializeField] private BoxCollider2D boxCol;
+    [SerializeField] private Transform groundCheck;
+    [SerializeField] private LayerMask groundLayer;
     public LevelOverController levelOverController;
-    public float speed = 5f;
-    public BoxCollider2D boxCol;
-    private bool crouch = false;
-    private bool isGrounded = false;
+    public ScoreController scoreController;
 
+    [Header("Movement")]
+    public float speed = 5f;
+    [SerializeField] private float jumpPower;
+    [SerializeField] private float fallMultiplier;
+    [SerializeField] private float jumpTime;
+    [SerializeField] private float JumpMultiplier;
+
+
+    private float horizontalInput;
+    private bool isGrounded;
+    private bool isJumping;
+    private float jumpCounter;
+    private bool isDead = false;
+    private bool crouch = false;
+
+
+    private Vector2 vecGravity;
     private Vector2 boxColInitSize;
     private Vector2 boxColInitOffset;
 
-    public ScoreController scoreController;
-
-    private bool isDead = false;
 
     private void Awake()
     {
-        Debug.Log("Player Controller awake");
-        rd2d = GetComponent<Rigidbody2D>();
+        vecGravity = new Vector2(0, -Physics2D.gravity.y);
+        rb2d = GetComponent<Rigidbody2D>();
     }
 
     // Start is called before the first frame update
@@ -47,57 +58,59 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         GetInput();
-        CrouchAnimantion();
-        PlayMovementAnimation(horizontalInput, verticalInput);
-        MovePlayer(horizontalInput, verticalInput);
-        MovePlayerVertically(verticalInput);
+        CrouchAnimation();
+        PlayMovementAnimation(horizontalInput);
+        MovePlayer(horizontalInput);
+        HandleJump();
     }
 
-    public void MovePlayerVertically(float vertical)
+    private void GetInput()
     {
-        if (vertical > 0 && isGrounded && !isDead)
+        horizontalInput = Input.GetAxis("Horizontal");
+    }
+
+    private void MovePlayer(float horizontal)
+    {
+        if (isDead) return;
+
+        Vector3 position = transform.position;
+        position.x += horizontal * speed * Time.deltaTime;
+        transform.position = position;
+    }
+
+    public void HandleJump()
+    {
+        isGrounded = Physics2D.OverlapCapsule(groundCheck.position, new Vector2(0.7f, 0.2f), CapsuleDirection2D.Horizontal, 0f, groundLayer);
+        if (Input.GetButtonDown("Jump") && isGrounded && !isDead)
         {
             animator.SetTrigger("Jump");
-            Debug.Log("Jumping 1");
-            rd2d.velocity = new Vector2(rd2d.velocity.x, 0f);
-            rd2d.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
+            rb2d.velocity = new Vector2(rb2d.velocity.x, jumpPower);
+            isJumping = true;
+            jumpCounter = 0;
         }
-    }
 
-    private void OnCollisionEnter2D(Collision2D other)
-    {
-        if(other.gameObject.CompareTag("PlayerDeath"))
+        if(rb2d.velocity.y > 0 && isJumping)
         {
-            PlayerDied();
-            int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
-            SceneManager.LoadScene(currentSceneIndex);
+            jumpCounter += Time.deltaTime;
+            if (jumpCounter > jumpTime)
+            {
+                isJumping = false;
+            }
+            rb2d.velocity += vecGravity * JumpMultiplier * Time.deltaTime;
         }
-    }
 
-    private void PlayerDied()
-    {
-        Destroy(gameObject);
-    }
-
-    private void OnCollisionStay2D(Collision2D other)
-    {
-        if (other.transform.tag == "Ground")
+        if(Input.GetButtonUp("Jump"))
         {
-            isGrounded = true;
+            isJumping = false;
         }
-    }
 
-    private void OnCollisionExit2D(Collision2D other)
-    {
-        if (other.transform.tag == "Ground")
+        if(rb2d.velocity.y <0)
         {
-            isGrounded = false;
+            rb2d.velocity -= vecGravity * fallMultiplier * Time.deltaTime;
         }
     }
 
-
-
-    private void CrouchAnimantion()
+    private void CrouchAnimation()
     {
         if (Input.GetKeyDown(KeyCode.LeftControl))
         {
@@ -107,15 +120,6 @@ public class PlayerController : MonoBehaviour
         {
             Crouch(false);
         }
-    }
-
-    private void MovePlayer(float horizontal, float vertical)
-    {
-        if(isDead) return;
-
-        Vector3 position = transform.position;
-        position.x += horizontal* speed * Time.deltaTime;
-        transform.position = position;
     }
 
     public void Crouch(bool crouch)
@@ -141,13 +145,7 @@ public class PlayerController : MonoBehaviour
         animator.SetBool("Crouch", crouch);
     }
 
-    private void GetInput()
-    {
-        horizontalInput = Input.GetAxis("Horizontal");
-        verticalInput = Input.GetAxisRaw("Vertical");
-    }
-
-    private void PlayMovementAnimation(float horizontal, float vertical)
+    private void PlayMovementAnimation(float horizontal)
     {
         Vector3 scale = transform.localScale;
         if (horizontal < 0)
@@ -161,6 +159,37 @@ public class PlayerController : MonoBehaviour
         transform.localScale = scale;
 
         animator.SetFloat("Speed", Mathf.Abs(horizontal));
+    }
+
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if(other.gameObject.CompareTag("KillZone"))
+        {
+            PlayerDied();
+            int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+            SceneManager.LoadScene(currentSceneIndex);
+        }
+    }
+
+    private void OnCollisionStay2D(Collision2D other)
+    {
+        if (other.transform.tag == "Ground")
+        {
+            isGrounded = true;
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D other)
+    {
+        if (other.transform.tag == "Ground")
+        {
+            isGrounded = false;
+        }
+    }
+
+    private void PlayerDied()
+    {
+        Destroy(gameObject);
     }
 
     public void PickUpKey()
