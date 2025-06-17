@@ -17,7 +17,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private BoxCollider2D boxCol;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
-    public LevelOverController levelOverController;
+    public LevelCompleteController levelCompleteController;
+    public GameOverController gameOverController;
     public ScoreController scoreController;
 
     [Header("Movement")]
@@ -25,7 +26,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float jumpPower;
     [SerializeField] private float fallMultiplier;
     [SerializeField] private float jumpTime;
-    [SerializeField] private float JumpMultiplier;
+    [SerializeField] private float jumpMultiplier;
 
 
     private float horizontalInput;
@@ -96,12 +97,28 @@ public class PlayerController : MonoBehaviour
             {
                 isJumping = false;
             }
-            rb2d.velocity += vecGravity * JumpMultiplier * Time.deltaTime;
+
+            float t = jumpCounter / jumpTime;
+            float currentJumpM = jumpMultiplier;
+
+            if (t > 0.5f)
+            {
+                currentJumpM = jumpMultiplier * (1 - t);
+            }
+
+            rb2d.velocity += vecGravity * currentJumpM * Time.deltaTime;
         }
 
         if(Input.GetButtonUp("Jump"))
         {
             isJumping = false;
+            jumpCounter = 0;
+
+
+            if(rb2d.velocity.y > 0)
+            {
+                rb2d.velocity = new Vector2(rb2d.velocity.x, rb2d.velocity.y*0.6f);
+            }
         }
 
         if(rb2d.velocity.y <0)
@@ -163,11 +180,10 @@ public class PlayerController : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other)
     {
-        if(other.gameObject.CompareTag("KillZone"))
+        if (other.gameObject.CompareTag("KillZone"))
         {
+            Debug.Log("Player entered the killzone");
             PlayerDied();
-            int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
-            SceneManager.LoadScene(currentSceneIndex);
         }
     }
 
@@ -190,6 +206,7 @@ public class PlayerController : MonoBehaviour
     private void PlayerDied()
     {
         Destroy(gameObject);
+        gameOverController.PlayerDied();
     }
 
     public void PickUpKey()
@@ -209,6 +226,6 @@ public class PlayerController : MonoBehaviour
     {
         yield return new WaitForSeconds(delay);
         Destroy(gameObject);
-        levelOverController.ReloadLevel();
+        gameOverController.PlayerDied();
     }
 }

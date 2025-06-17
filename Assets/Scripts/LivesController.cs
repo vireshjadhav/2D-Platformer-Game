@@ -22,17 +22,17 @@ public class LivesController : MonoBehaviour
     {
         if (dead == true)
         {
-            Debug.Log("Death animation will be play");
+            //Debug.Log("Death animation will be play");
             playerController.KillPlayer();
         }
     }
 
     public void ReduceLives(int Death)
     {
-        Debug.Log("Death :"+ Death);
-        Debug.Log("Life :"+ life);
+        //Debug.Log("Death :"+ Death);
+        //Debug.Log("Life :"+ life);
         life -= Death;
-        Debug.Log("Life :" + life);
+        //Debug.Log("Life :" + life);
         Destroy(hearts[life].gameObject);
         if (life < 1)
         {
