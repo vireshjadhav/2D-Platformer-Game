@@ -4,10 +4,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class LevelOverController : MonoBehaviour
-{
-    [SerializeField] private int currentSceneIndex;
-
+public class LevelCompleteController : MonoBehaviour
+{   
     // Start is called before the first frame update
     void Start()
     {
@@ -33,19 +31,12 @@ public class LevelOverController : MonoBehaviour
 
     private void LoadNextLevel()
     {
-        int nextSceneIndex = currentSceneIndex + 1;
+        int nextSceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
         int totalNumberOfScene = SceneManager.sceneCountInBuildSettings;
 
         if (nextSceneIndex < totalNumberOfScene)
         {
             SceneManager.LoadScene(nextSceneIndex);
         }
-    }
-
-    public void ReloadLevel()
-    {
-        Debug.Log("CurrentSceneIndex " + currentSceneIndex);
-        int previousSceneIndex = currentSceneIndex - 1;
-        SceneManager.LoadScene(previousSceneIndex);
     }
 }

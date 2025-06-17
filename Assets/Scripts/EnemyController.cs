@@ -85,7 +85,6 @@ public class EnemyController : MonoBehaviour
             Debug.Log("Player hit the enemy collider");
             PlayerController playerController = collision.gameObject.GetComponent<PlayerController>();
             livesController.ReduceLives(death);
-
         }
     }
 
