@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -39,5 +40,12 @@ public class LevelOverController : MonoBehaviour
         {
             SceneManager.LoadScene(nextSceneIndex);
         }
+    }
+
+    public void ReloadLevel()
+    {
+        Debug.Log("CurrentSceneIndex " + currentSceneIndex);
+        int previousSceneIndex = currentSceneIndex - 1;
+        SceneManager.LoadScene(previousSceneIndex);
     }
 }

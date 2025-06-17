@@ -1,0 +1,13 @@
+diff a/Assets/Scenes/Level_01.unity b/Assets/Scenes/Level_01.unity	(rejected hunks)
+@@ -761,6 +761,11 @@
+       propertyPath: m_LocalEulerAnglesHint.z
+       value: 0
+       objectReference: {fileID: 0}
++    - target: {fileID: 9217905120002205568, guid: 6e00766903ca79c429a33530d6ad25d1,
++        type: 3}
++      propertyPath: m_SortingOrder
++      value: 1
++      objectReference: {fileID: 0}
+     m_RemovedComponents: []
+   m_SourcePrefab: {fileID: 100100000, guid: 6e00766903ca79c429a33530d6ad25d1, type: 3}
+ --- !u!1001 &642818701
