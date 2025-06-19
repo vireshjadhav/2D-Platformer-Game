@@ -7,6 +7,7 @@ TagManager:
   - Ground
   - PlayerDeath
   - Collectibles
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -14,10 +15,10 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
+  - Impassable Objects
+  - Player
+  - Interactables
+  - Enemy
   - 
   - 
   - 

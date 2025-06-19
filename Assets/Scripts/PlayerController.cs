@@ -28,6 +28,8 @@ public class PlayerController : MonoBehaviour
 
     public ScoreController scoreController;
 
+    private bool isDead = false;
+
     private void Awake()
     {
         Debug.Log("Player Controller awake");
@@ -53,10 +55,11 @@ public class PlayerController : MonoBehaviour
 
     public void MovePlayerVertically(float vertical)
     {
-        if (vertical > 0 && isGrounded)
+        if (vertical > 0 && isGrounded && !isDead)
         {
             animator.SetTrigger("Jump");
             Debug.Log("Jumping 1");
+            rd2d.velocity = new Vector2(rd2d.velocity.x, 0f);
             rd2d.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
         }
     }
@@ -108,6 +111,8 @@ public class PlayerController : MonoBehaviour
 
     private void MovePlayer(float horizontal, float vertical)
     {
+        if(isDead) return;
+
         Vector3 position = transform.position;
         position.x += horizontal* speed * Time.deltaTime;
         transform.position = position;
@@ -161,5 +166,20 @@ public class PlayerController : MonoBehaviour
     public void PickUpKey()
     {
         scoreController.IncreseScore(10);
+    }
+
+    public void KillPlayer()
+    {
+        Debug.Log("Player is killed by enemy.");
+        animator.SetBool("IsDead", true);
+        isDead = true;
+        StartCoroutine(DestroyAfterDelay(2f));
+    }
+
+    private IEnumerator DestroyAfterDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        Destroy(gameObject);
+        levelOverController.ReloadLevel();
     }
 }
