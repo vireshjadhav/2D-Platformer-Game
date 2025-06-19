@@ -1,14 +1,11 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class LobbyController : MonoBehaviour
 {
     public Button playButton;
     public Button quitButton;
+    public GameObject LevelSelection;
 
     private void Awake()
     {
@@ -24,7 +21,7 @@ public class LobbyController : MonoBehaviour
 
     private void PlayGame()
     {
-        SceneManager.LoadScene(1);
+        LevelSelection.SetActive(true);
     }
 
     // Start is called before the first frame update
