@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -25,6 +22,7 @@ public class LevelCompleteController : MonoBehaviour
         if (collision.gameObject.GetComponent<PlayerController>() != null)
         {
             Debug.Log("Level finished by the player");
+            LevelManager.Instance.MarkCurrentLevelComplete();
             LoadNextLevel();
         }
     }
