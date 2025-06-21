@@ -53,9 +53,4 @@ public class GameOverController : MonoBehaviour
     {
         SceneManager.LoadScene(0);
     }
-
-    public void GameOver()
-    {
-        gameOverPanel.SetActive(true); 
-    }
 }
