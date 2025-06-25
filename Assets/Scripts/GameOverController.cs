@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -36,7 +33,7 @@ public class GameOverController : MonoBehaviour
 
     public void PlayerDied()
     {
-        Debug.Log("Canvas is getting activated.");
+        SoundManager.Instance.PlayMusic(Sounds.PlayerDeath);
         gameOverPanel.SetActive(true);
     }
 

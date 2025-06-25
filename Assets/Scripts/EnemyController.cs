@@ -1,9 +1,6 @@
-using System;
 using System.Collections;
-using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using UnityEngine;
-using UnityEngine.UIElements;
+
 
 public class EnemyController : MonoBehaviour
 {
@@ -82,8 +79,10 @@ public class EnemyController : MonoBehaviour
     {
         if(collision.gameObject.GetComponent<PlayerController>() != null)
         {
+            SoundManager.Instance.Play(Sounds.PlayerDamage);
             Debug.Log("Player hit the enemy collider");
             PlayerController playerController = collision.gameObject.GetComponent<PlayerController>();
+            playerController.HurtAnimation();
             livesController.ReduceLives(death);
         }
     }

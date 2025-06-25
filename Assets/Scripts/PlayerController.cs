@@ -202,6 +202,11 @@ public class PlayerController : MonoBehaviour
             isGrounded = false;
         }
     }
+    
+    public void HurtAnimation()
+    {
+        animator.SetTrigger("Hurt");
+    }
 
     private void PlayerDied()
     {

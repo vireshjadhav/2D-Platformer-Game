@@ -22,6 +22,7 @@ public class KeyController : MonoBehaviour
     {
          if(collision.gameObject.GetComponent<PlayerController>() != null)
         {
+            SoundManager.Instance.Play(Sounds.KeyPickUp);
             PlayerController playerContoller = collision.gameObject.GetComponent<PlayerController>();
             playerContoller.PickUpKey();
             animator.SetTrigger("KeyCollected");
