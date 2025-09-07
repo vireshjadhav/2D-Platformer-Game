@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
+using TMPro;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.Analytics;
@@ -24,6 +25,8 @@ public class PlayerController : MonoBehaviour
 
     private Vector2 boxColInitSize;
     private Vector2 boxColInitOffset;
+
+    public ScoreController scoreController;
 
     private void Awake()
     {
@@ -75,10 +78,10 @@ public class PlayerController : MonoBehaviour
 
     private void OnCollisionStay2D(Collision2D other)
     {
-            if(other.transform.tag == "Ground")
-            {
-                isGrounded = true;
-            }
+        if (other.transform.tag == "Ground")
+        {
+            isGrounded = true;
+        }
     }
 
     private void OnCollisionExit2D(Collision2D other)
@@ -153,5 +156,10 @@ public class PlayerController : MonoBehaviour
         transform.localScale = scale;
 
         animator.SetFloat("Speed", Mathf.Abs(horizontal));
+    }
+
+    public void PickUpKey()
+    {
+        scoreController.IncreseScore(10);
     }
 }
