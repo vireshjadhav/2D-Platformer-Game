@@ -54,6 +54,7 @@ public class LevelManager : MonoBehaviour
     public void SetLevelStatus(string level, LevelStatus levelStatus) 
     {
         PlayerPrefs.SetInt(level, (int)levelStatus);
+        PlayerPrefs.Save();
         Debug.Log("Setting Level:" + level + "Status:" + levelStatus);
     }
 }

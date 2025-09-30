@@ -9,6 +9,7 @@ TagManager:
   - Enemy
   - KillZone
   - Heart
+  - EnemyProjectile
   layers:
   - Default
   - TransparentFX
@@ -21,9 +22,9 @@ TagManager:
   - Interactables
   - Enemy
   - KillZone
-  - 
-  - 
-  - 
+  - Projectile
+  - EnemyProjectile
+  - Collectibles
   - 
   - 
   - 
@@ -45,4 +46,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Projectile
+    uniqueID: 1202065385
     locked: 0

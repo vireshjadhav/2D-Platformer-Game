@@ -14,7 +14,9 @@ public class SoundManager : MonoBehaviour
     public SoundType[] Sounds;
 
     public bool IsMute = false;
-    public float Volume = 1f;
+    public float MasterVolume = 1f;
+    public float MusicVolume = 1f;
+    public float EffectVolume = 1f;
 
     private void Awake()
     {
@@ -32,25 +34,71 @@ public class SoundManager : MonoBehaviour
 
     private void Start()
     {
-        SetVolume(0.5f);
-        PlayMusic(global::Sounds.Music);    
+        IsMute = PlayerPrefs.GetInt("IsMute", 0) == 1;
+        MasterVolume = PlayerPrefs.GetFloat("MasterVolume", 1f);
+        MusicVolume = PlayerPrefs.GetFloat("MusicVolume", 1f);
+        EffectVolume = PlayerPrefs.GetFloat("EffectVolume", 1f);
+
+        SetMasterVolume(MasterVolume);
+        SetMusicVolume(MusicVolume);
+        SetEffectVolume(EffectVolume);
+        Mute(IsMute);
+
+        PlayMusic(global::Sounds.Music);
+    }
+
+    public void SetMasterVolume(float volume)
+    {
+        MasterVolume = volume;
+        PlayerPrefs.SetFloat("MasterVolume", MasterVolume);
+        SetMusicVolume(MusicVolume);
+        SetEffectVolume(EffectVolume);
+        PlayerPrefs.Save();
+    }
+
+    public void SetEffectVolume(float volume)
+    {
+        EffectVolume = volume;
+        PlayerPrefs.SetFloat("EffectVolume", EffectVolume);
+        soundEffect.volume = EffectVolume * MasterVolume;
+        PlayerPrefs.Save();
     }
 
     public void Mute(bool status)
     {
         IsMute = status;
+        PlayerPrefs.SetInt("IsMute", IsMute ? 1 : 0);
+
+        if (IsMute)
+        {
+            soundMusic.volume = 0f;
+            soundEffect.volume = 0f;
+        }
+        else
+        {
+            soundMusic.volume = MusicVolume * MasterVolume;
+            soundEffect.volume = EffectVolume * MasterVolume;
+
+            if(!soundMusic.isPlaying)
+            {
+                RestartMusic();
+            }
+        }
+
+        PlayerPrefs.Save();
     }
 
-    public void SetVolume(float volume)
+    public void SetMusicVolume(float volume)
     {
-        Volume = volume;
-        soundEffect.volume = Volume;
-        soundMusic.volume = Volume;
+        MusicVolume = volume;
+        PlayerPrefs.SetFloat("MusicVolume", MusicVolume);
+        soundMusic.volume = MusicVolume * MasterVolume;
+        PlayerPrefs.Save();
     }
 
     public void PlayMusic(Sounds sound)
     {
-        if(IsMute)
+        if (IsMute)
             return;
 
         AudioClip clip = getSoundClip(sound);
@@ -89,6 +137,18 @@ public class SoundManager : MonoBehaviour
             return item.soundClip;
         return null;
     }
+
+    public void StopAllSounds()
+    {
+        soundEffect.Stop();
+        soundMusic.Stop();
+        soundMusic.clip = null;
+    }
+
+    public void RestartMusic()
+    {
+        PlayMusic(global::Sounds.Music);
+    }
 }
 
 [Serializable]
@@ -106,5 +166,6 @@ public enum Sounds
     PlayerDeath,
     PlayerDamage,
     EnemyDeath,
-    KeyPickUp
+    KeyPickUp,
+    LevelUp
 }

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1877857826}
   - component: {fileID: 1877857825}
   - component: {fileID: 1877857824}
+  - component: {fileID: 8177025126316303742}
   m_Layer: 7
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -84,6 +85,22 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1877857823}
   m_Enabled: 1
+--- !u!114 &8177025126316303742
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1877857823}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa77031e8af59ec42b9863c9763dabda, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  duration: 0.3
+  magnitude: 0.1
+  cameraMoveUnit: 4
+  speed: 0.5
 --- !u!1 &2780626663751746216
 GameObject:
   m_ObjectHideFlags: 0
@@ -286,13 +303,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 366ad969d8f42ca468909363b39c7fdb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rd2d: {fileID: 1255037360}
+  rb2d: {fileID: 1255037360}
   animator: {fileID: 1255037364}
-  jumpForce: 3.2
-  levelOverController: {fileID: 0}
-  speed: 5
   boxCol: {fileID: 1255037361}
+  groundCheck: {fileID: 3533667860455807584}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  levelCompleteController: {fileID: 8479472265965020392, guid: 68f3a97b29157d24a989ec470b5201e1,
+    type: 3}
+  gameOverController: {fileID: 113749314136505701, guid: 80d51321422a5f24fbe88a2e3b949fd0,
+    type: 3}
   scoreController: {fileID: 0}
+  gameCompleteController: {fileID: 0}
+  speed: 5
+  jumpPower: 0
+  fallMultiplier: 0
+  jumpTime: 0
+  jumpMultiplier: 0
+  pushStrenght: 0.5
+  knockbackDuration: 0.05
+  knockBackMultiplier: 0.5
+  damageCooldown: 2
+  spriteRenderer: {fileID: 9217905120002205568}
+  blinkDuration: 0.2
+  canDealDamage: 1
 --- !u!114 &6782668049489171058
 MonoBehaviour:
   m_ObjectHideFlags: 0
