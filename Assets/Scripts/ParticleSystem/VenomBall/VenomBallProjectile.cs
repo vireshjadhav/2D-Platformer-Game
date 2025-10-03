@@ -53,31 +53,34 @@ public class VenomBallProjectile : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             PlayerController hitPlayer = collision.GetComponent<PlayerController>();
-            if (hitPlayer != null && hitPlayer.canDealDamage)
+
+            if (hitPlayer == null || !hitPlayer.canDealDamage) return;
+
+            hitPlayer.canDealDamage = false;
+
+            SoundManager.Instance.Play(Sounds.PlayerDamage);
+            Debug.Log("Player hit by venom ball");
+
+            //if (hitPlayer != null && hitPlayer.canDealDamage)
+            //{
+            LivesController lives = FindObjectOfType<LivesController>();
+            if (lives != null && !lives.IsDead())
             {
-                hitPlayer.canDealDamage = false;
-
-                SoundManager.Instance.Play(Sounds.PlayerDamage);
-                Debug.Log("Player hit by venom ball");
-
-                LivesController lives = FindObjectOfType<LivesController>();
-                if (lives != null && !lives.IsDead())
-                {
-                    lives.ReduceLives(1);
-                }
-
-                hitPlayer.HurtAnimation();
-
-                //Vector2 knockDir = (hitPlayer.transform.position - transform.position).normalized;
-                //hitPlayer.PushPlayerAway(knockDir * knockBackForce);
-
-                float directionX = collision.transform.position.x > transform.position.x ? 1f : -1f;
-                Vector2 pushDirection = new Vector2(directionX, 0.3f);
-                hitPlayer.PushPlayerAway(pushDirection);
-
-
-                hitPlayer.DamageCoolDown();
+                lives.ReduceLives(1);
             }
+
+            hitPlayer.HurtAnimation();
+
+            //Vector2 knockDir = (hitPlayer.transform.position - transform.position).normalized;
+            //hitPlayer.PushPlayerAway(knockDir * knockBackForce);
+
+            float directionX = collision.transform.position.x > transform.position.x ? 1f : -1f;
+            Vector2 pushDirection = new Vector2(directionX, 0.3f);
+            hitPlayer.PushPlayerAway(pushDirection);
+
+
+            hitPlayer.DamageCoolDown();
+            //}
 
             Destroy(gameObject);
         }

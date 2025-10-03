@@ -151,7 +151,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 4
   m_Sprite: {fileID: 21300000, guid: 914c7ff4b2e03254f8fca375221689a5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -267,6 +267,7 @@ MonoBehaviour:
   animator: {fileID: 4515811837628990516}
   livesController: {fileID: 6782668049489171058, guid: 6e00766903ca79c429a33530d6ad25d1,
     type: 3}
+  player: {fileID: 0}
 --- !u!1 &8420429892343456576
 GameObject:
   m_ObjectHideFlags: 0

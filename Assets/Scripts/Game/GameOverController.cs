@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using TMPro;
 using UnityEngine;
@@ -45,14 +44,21 @@ public class GameOverController : MonoBehaviour
 
     public void PlayerDied()
     {
-        SoundManager.Instance.PlayMusic(Sounds.PlayerDeath);
+        SoundManager.Instance.Play(Sounds.PlayerDeath);
         gameOverPanel.SetActive(true);
+
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
     }
 
 
     public void ReloadLevel()
     {
         gameOverPanel.SetActive(false);
+
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
+
         SoundManager.Instance.StopAllSounds();
         Debug.Log("CurrentSceneIndex " + currentSceneIndex);
 
@@ -78,11 +84,18 @@ public class GameOverController : MonoBehaviour
 
     private void loadLobby()
     {
+        SoundManager.Instance.StopAllSounds();
         SceneManager.LoadScene(0);
+
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
     }
 
     public void GameOver()
     {
-        gameOverPanel.SetActive(true); 
+        gameOverPanel.SetActive(true);
+
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
     }
 }

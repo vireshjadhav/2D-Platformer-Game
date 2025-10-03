@@ -8,7 +8,9 @@ public class LevelManager : MonoBehaviour
     private static LevelManager instance;
 
     public string[] Levels;
+
     public static LevelManager Instance { get { return instance; } }
+
     private void Awake()
     {
         if (instance == null)

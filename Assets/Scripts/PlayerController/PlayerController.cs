@@ -29,6 +29,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float damageCooldown = 1.5f;
     [SerializeField] private SpriteRenderer spriteRenderer;
     [SerializeField] private float blinkDuration = 0.1f;
+
     public bool canDealDamage = true;
 
     private bool isKnockedBack = false;
@@ -56,6 +57,12 @@ public class PlayerController : MonoBehaviour
     {
         boxColInitSize = boxCol.size;
         boxColInitOffset = boxCol.offset;
+
+        if (CameraController.instance != null)
+        {
+            CameraController.instance.SetTarget(this.transform);
+        }
+
     }
 
     // Update is called once per frame
@@ -89,10 +96,12 @@ public class PlayerController : MonoBehaviour
     public void HandleJump()
     {
         isGrounded = Physics2D.OverlapCapsule(groundCheck.position, new Vector2(0.7f, 0.2f), CapsuleDirection2D.Horizontal, 0f, groundLayer);
+
         if (Input.GetButtonDown("Jump") && isGrounded && !isDead)
         {
             animator.SetTrigger("Jump");
-            rb2d.velocity = new Vector2(rb2d.velocity.x, jumpPower); isJumping = true;
+            rb2d.velocity = new Vector2(rb2d.velocity.x, jumpPower); 
+            isJumping = true;
             jumpCounter = 0;
         }
         if (rb2d.velocity.y > 0 && isJumping)
@@ -165,7 +174,8 @@ public class PlayerController : MonoBehaviour
         {
             scale.x = Mathf.Abs(scale.x);
         }
-        transform.localScale = scale; animator.SetFloat("Speed", Mathf.Abs(horizontal));
+        transform.localScale = scale; 
+        animator.SetFloat("Speed", Mathf.Abs(horizontal));
     }
     private void OnCollisionEnter2D(Collision2D other)
     {
@@ -191,7 +201,7 @@ public class PlayerController : MonoBehaviour
     }
     public void HurtAnimation()
     {
-        CameraShakeController.instance.TriggerShake(CameraShakeController.instance.duration, CameraShakeController.instance.magnitude);
+        CameraController.instance.TriggerShake(CameraController.instance.duration, CameraController.instance.magnitude);
         animator.SetTrigger("Hurt");
     }
 
@@ -214,8 +224,8 @@ public class PlayerController : MonoBehaviour
     }
     private IEnumerator DestroyAfterDelay(float delay)
     {
-        yield return new WaitForSeconds(delay);
         PlayerDied();
+        yield return new WaitForSeconds(delay);
     }
     public void SetGameWon()
     {
@@ -223,10 +233,16 @@ public class PlayerController : MonoBehaviour
         gameWon = true;
         rb2d.velocity = Vector3.zero;
         rb2d.bodyType = RigidbodyType2D.Static;
+
+        animator.SetFloat("Speed", 0f);
+        animator.SetBool("Crouch", false);
+        animator.ResetTrigger("Jump");
     }
     public void PushPlayerAway(Vector2 direction)
     {
+        if (!canDealDamage) return;
 
+        canDealDamage = false;
         isKnockedBack = true; 
         rb2d.velocity = Vector2.zero;
 

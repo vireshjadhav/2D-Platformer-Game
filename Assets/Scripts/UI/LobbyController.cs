@@ -7,14 +7,17 @@ public class LobbyController : MonoBehaviour
 {
     public Button playButton;
     public Button optionButton;
+    public Button instructionButton;
     public Button quitButton;
     public Button backBLevelSelection;
     public Button backButtonOption;
+    public Button backButtonInstruction;
     public Slider masterVolume;
     public Slider musicVolume;
     public Slider effectsVolume;
-    public GameObject LevelSelection;
-    public GameObject OptionPopUp;
+    public GameObject levelSelection;
+    public GameObject optionPopUp;
+    public GameObject instructionPanel;
     public Toggle muteToggle;
 
 
@@ -22,14 +25,20 @@ public class LobbyController : MonoBehaviour
     {
         playButton.onClick.AddListener(PlayGame);
         optionButton.onClick.AddListener(OptionsPopUp);
+        instructionButton.onClick.AddListener(Instruction);
         quitButton.onClick.AddListener(Quit);
         backBLevelSelection.onClick.AddListener(GoBackLobby);
         backButtonOption.onClick.AddListener(GoBack);
+        backButtonInstruction.onClick.AddListener(GoBackInstruct);
 
         masterVolume.onValueChanged.AddListener(OnMasterVolumeChanged);
         musicVolume.onValueChanged.AddListener(OnMusicVolumeChanged);
         effectsVolume.onValueChanged.AddListener(OnEffectVolumeChanged);
         muteToggle.onValueChanged.AddListener(OnMuteToggled);
+
+
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
 
     }
 
@@ -66,30 +75,43 @@ public class LobbyController : MonoBehaviour
     private void GoBackLobby()
     {
         SoundManager.Instance.Play(Sounds.ButtonClick);
-        LevelSelection.SetActive(false);
+        levelSelection.SetActive(false);
     }
 
     private void GoBack()
     {
         SoundManager.Instance.Play(Sounds.ButtonClick);
-        OptionPopUp.SetActive(false);
+        optionPopUp.SetActive(false);
     }
 
     private void OptionsPopUp()
     {
         SoundManager.Instance.Play(Sounds.ButtonClick);
-        OptionPopUp.SetActive(true);
+        optionPopUp.SetActive(true);
     }
 
     private void Quit()
     {
         Debug.Log("Application Closed");
+        SoundManager.Instance.Play(Sounds.ButtonClick);
         Application.Quit();
     }
 
     private void PlayGame()
     {
         SoundManager.Instance.Play(Sounds.ButtonClick);
-        LevelSelection.SetActive(true);
+        levelSelection.SetActive(true);
+    }
+
+    private void Instruction()
+    {
+        SoundManager.Instance.Play(Sounds.ButtonClick);
+        instructionPanel.SetActive(true);
+    }
+
+    private void GoBackInstruct()
+    {
+        SoundManager.Instance.Play(Sounds.ButtonClick);
+        instructionPanel.SetActive(false);
     }
 }

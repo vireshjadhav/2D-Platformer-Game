@@ -1,8 +1,4 @@
-using System;
-using System.Collections;
-using UnityEditor.Tilemaps;
 using UnityEngine;
-using static UnityEngine.GraphicsBuffer;
 
 public class ChomperAttackController : MonoBehaviour
 {
@@ -95,7 +91,7 @@ public class ChomperAttackController : MonoBehaviour
             {
                 Debug.Log("[Attack] Player in bite range! Attacking now.");
                 animator.SetFloat("PatrolSpeed", 0);
-                animator.SetTrigger("Attack");
+                animator.SetBool("IsCollided", true);
             }
             else
             {

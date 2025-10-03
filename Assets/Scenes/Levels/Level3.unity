@@ -418,7 +418,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -1
+  m_SortingOrder: 1
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0.2421875, y: 0.88671875, z: 0}
   m_MaxChunkCount: 16
@@ -1302,6 +1302,7 @@ MonoBehaviour:
   quitButton: {fileID: 0}
   lobbyButton: {fileID: 0}
   gameCompletePanel: {fileID: 0}
+  doorCenterPoint: {fileID: 0}
   confettiEffect1: {fileID: 1554781279}
   confettiEffect2: {fileID: 1739252405}
 --- !u!61 &617141493
@@ -1403,7 +1404,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 3
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0.9511719, y: 0, z: 0}
   m_MaxChunkCount: 16
@@ -1720,6 +1721,18 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &656193340 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 838590829021439196, guid: 80d51321422a5f24fbe88a2e3b949fd0,
+    type: 3}
+  m_PrefabInstance: {fileID: 577497623}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &656193341 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 396767781041488489, guid: 80d51321422a5f24fbe88a2e3b949fd0,
+    type: 3}
+  m_PrefabInstance: {fileID: 577497623}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &661614277
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1895,7 +1908,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -1
+  m_SortingOrder: 2
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
@@ -4797,7 +4810,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 5
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0.8232422, y: 0.7128906, z: 0}
   m_MaxChunkCount: 16
@@ -6177,7 +6190,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -1
+  m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0.15625, y: 0.36523438, z: 0}
   m_MaxChunkCount: 16
@@ -18427,6 +18440,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b29a53e6bdf4f2f41acc256f54412514, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  doorCenterPoint: {fileID: 0}
   playerController: {fileID: 2052141237}
 --- !u!61 &1964023763
 BoxCollider2D:
@@ -18462,7 +18476,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1964023761}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -85.99, y: 20.73, z: 0}
+  m_LocalPosition: {x: -86.032, y: 20.597, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -18530,7 +18544,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 05be6b0c12ae3ab4dbdcec67cb31003f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
@@ -18864,12 +18878,12 @@ PrefabInstance:
     - target: {fileID: 5644355427627704005, guid: 6e00766903ca79c429a33530d6ad25d1,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 21.6
+      value: 23.078
       objectReference: {fileID: 0}
     - target: {fileID: 5644355427627704005, guid: 6e00766903ca79c429a33530d6ad25d1,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.15
+      value: -2.123
       objectReference: {fileID: 0}
     - target: {fileID: 5644355427627704005, guid: 6e00766903ca79c429a33530d6ad25d1,
         type: 3}
@@ -18926,6 +18940,16 @@ PrefabInstance:
       propertyPath: hearts.Array.data[2]
       value: 
       objectReference: {fileID: 577497626}
+    - target: {fileID: 6782668049489171058, guid: 6e00766903ca79c429a33530d6ad25d1,
+        type: 3}
+      propertyPath: hearts.Array.data[3]
+      value: 
+      objectReference: {fileID: 656193341}
+    - target: {fileID: 6782668049489171058, guid: 6e00766903ca79c429a33530d6ad25d1,
+        type: 3}
+      propertyPath: hearts.Array.data[4]
+      value: 
+      objectReference: {fileID: 656193340}
     - target: {fileID: 8177025126316303742, guid: 6e00766903ca79c429a33530d6ad25d1,
         type: 3}
       propertyPath: speed
@@ -18944,7 +18968,7 @@ PrefabInstance:
     - target: {fileID: 9217905120002205568, guid: 6e00766903ca79c429a33530d6ad25d1,
         type: 3}
       propertyPath: m_SortingOrder
-      value: 1
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6e00766903ca79c429a33530d6ad25d1, type: 3}

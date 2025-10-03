@@ -105,6 +105,7 @@ public class SoundManager : MonoBehaviour
         if (clip != null)
         {
             soundMusic.clip = clip;
+            soundMusic.loop = true;
             soundMusic.Play();
         }
         else

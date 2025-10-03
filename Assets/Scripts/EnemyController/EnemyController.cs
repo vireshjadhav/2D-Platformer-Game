@@ -110,6 +110,7 @@ public class EnemyController : MonoBehaviour
 
             SoundManager.Instance.Play(Sounds.PlayerDamage);
             Debug.Log("Player hit the enemy collider");
+            playerController.HurtAnimation();
 
             float directionX = collision.transform.position.x > transform.position.x ? 1f : -1f;
             Vector2 pushDirection =new Vector2 (directionX, 0.3f);
@@ -146,7 +147,6 @@ public class EnemyController : MonoBehaviour
             currentScale *= -1;
             SetApplyCurrentScale();
         }
-
     }
 
     private void FaceTargetPoint()
