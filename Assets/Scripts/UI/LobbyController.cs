@@ -55,11 +55,29 @@ public class LobbyController : MonoBehaviour
     private void OnMuteToggled(bool isMute)
     {
         SoundManager.Instance.Mute(isMute);
+
+        if (isMute)
+        {
+            masterVolume.interactable = false;
+        }
+        else
+        {
+            masterVolume.interactable = true;
+        }
     }
 
     private void OnMasterVolumeChanged(float value)
     {
         SoundManager.Instance.SetMasterVolume(value);
+
+        if (value <= 0.01f)
+        {
+            muteToggle.isOn = true;
+        }
+        else
+        {
+            muteToggle.isOn = false;
+        }
     }
 
     private void OnMusicVolumeChanged(float value)

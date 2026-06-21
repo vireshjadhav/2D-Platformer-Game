@@ -56,7 +56,7 @@ public class VenomBallProjectile : MonoBehaviour
 
             if (hitPlayer == null || !hitPlayer.canDealDamage) return;
 
-            hitPlayer.canDealDamage = false;
+            //hitPlayer.canDealDamage = false;
 
             SoundManager.Instance.Play(Sounds.PlayerDamage);
             Debug.Log("Player hit by venom ball");

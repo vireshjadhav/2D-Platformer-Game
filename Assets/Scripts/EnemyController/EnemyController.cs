@@ -106,7 +106,7 @@ public class EnemyController : MonoBehaviour
         PlayerController playerController = collision.gameObject.GetComponent<PlayerController>();
         if (playerController != null && playerController.canDealDamage)
         {
-            playerController.canDealDamage = false;
+            //playerController.canDealDamage = false;
 
             SoundManager.Instance.Play(Sounds.PlayerDamage);
             Debug.Log("Player hit the enemy collider");

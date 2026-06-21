@@ -60,14 +60,13 @@ public class SoundManager : MonoBehaviour
     {
         EffectVolume = volume;
         PlayerPrefs.SetFloat("EffectVolume", EffectVolume);
-        soundEffect.volume = EffectVolume * MasterVolume;
+        soundEffect.volume = IsMute ? 0.0f : EffectVolume * MasterVolume;
         PlayerPrefs.Save();
     }
 
     public void Mute(bool status)
     {
         IsMute = status;
-        PlayerPrefs.SetInt("IsMute", IsMute ? 1 : 0);
 
         if (IsMute)
         {
@@ -85,6 +84,7 @@ public class SoundManager : MonoBehaviour
             }
         }
 
+        PlayerPrefs.SetInt("IsMute", IsMute ? 1 : 0);
         PlayerPrefs.Save();
     }
 
@@ -92,7 +92,7 @@ public class SoundManager : MonoBehaviour
     {
         MusicVolume = volume;
         PlayerPrefs.SetFloat("MusicVolume", MusicVolume);
-        soundMusic.volume = MusicVolume * MasterVolume;
+        soundMusic.volume = IsMute ? 0.0f : MusicVolume * MasterVolume;
         PlayerPrefs.Save();
     }
 

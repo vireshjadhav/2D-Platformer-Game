@@ -2075,10 +2075,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1255037365, guid: 6e00766903ca79c429a33530d6ad25d1, type: 3}
-      propertyPath: pushStrenght
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 1255037365, guid: 6e00766903ca79c429a33530d6ad25d1, type: 3}
       propertyPath: JumpMultiplier
       value: 0.5
       objectReference: {fileID: 0}
@@ -2103,20 +2099,12 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 207758477}
     - target: {fileID: 1255037365, guid: 6e00766903ca79c429a33530d6ad25d1, type: 3}
-      propertyPath: knockbackDuration
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1255037365, guid: 6e00766903ca79c429a33530d6ad25d1, type: 3}
       propertyPath: gameOverController
       value: 
       objectReference: {fileID: 1907970510}
     - target: {fileID: 1255037365, guid: 6e00766903ca79c429a33530d6ad25d1, type: 3}
       propertyPath: groundLayer.m_Bits
       value: 64
-      objectReference: {fileID: 0}
-    - target: {fileID: 1255037365, guid: 6e00766903ca79c429a33530d6ad25d1, type: 3}
-      propertyPath: knockBackMultiplier
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1255037365, guid: 6e00766903ca79c429a33530d6ad25d1, type: 3}
       propertyPath: levelOverController

@@ -21,14 +21,16 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float jumpMultiplier = 2f;
 
     [Header("KnockBack")]
-    [SerializeField] private float pushStrenght = 0.5f;
-    [SerializeField] private float knockbackDuration = 0.05f;
-    [SerializeField] private float knockBackMultiplier = 0.5f;
+    [SerializeField] private float pushStrenght = 3.0f;
+    [SerializeField] private float knockbackDuration = 1f;
+    [SerializeField] private float knockBackMultiplier = 1f;
 
     [Header("Invincibility")]
     [SerializeField] private float damageCooldown = 1.5f;
     [SerializeField] private SpriteRenderer spriteRenderer;
     [SerializeField] private float blinkDuration = 0.1f;
+
+    [SerializeField] private float deathAnimationDelay = 2.0f;
 
     public bool canDealDamage = true;
 
@@ -220,12 +222,12 @@ public class PlayerController : MonoBehaviour
         Debug.Log("Player is killed by enemy.");
         animator.SetBool("IsDead", true);
         isDead = true;
-        StartCoroutine(DestroyAfterDelay(2f));
+        StartCoroutine(DestroyAfterDelay(deathAnimationDelay));
     }
     private IEnumerator DestroyAfterDelay(float delay)
     {
-        PlayerDied();
         yield return new WaitForSeconds(delay);
+        PlayerDied();
     }
     public void SetGameWon()
     {
@@ -240,13 +242,18 @@ public class PlayerController : MonoBehaviour
     }
     public void PushPlayerAway(Vector2 direction)
     {
-        if (!canDealDamage) return;
+        if (!canDealDamage)
+        {
+            Debug.Log("Returned because canDealDamage is false");
+            return;
+        }
 
         canDealDamage = false;
         isKnockedBack = true; 
         rb2d.velocity = Vector2.zero;
 
         Vector2 knockDir = new Vector2(direction.x * pushStrenght, direction.y * pushStrenght * knockBackMultiplier);
+        Debug.Log("Knock back Direction: " + knockDir);
         rb2d.AddForce(knockDir, ForceMode2D.Impulse);
 
         HurtAnimation();
@@ -255,6 +262,7 @@ public class PlayerController : MonoBehaviour
     }
     private IEnumerator knockBackCoroutine()
     {
+        Debug.Log("Push Back Coroutine is called");
         yield return new WaitForSeconds(knockbackDuration);
         isKnockedBack = false;
     }

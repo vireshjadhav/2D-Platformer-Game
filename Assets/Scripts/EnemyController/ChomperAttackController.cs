@@ -40,7 +40,7 @@ public class ChomperAttackController : MonoBehaviour
 
         if (enemyController.isPlayerInAttackRange && player != null)
         {
-            Debug.Log("[Chase] chasing player at: " + player.position);
+            //Debug.Log("[Chase] chasing player at: " + player.position);
             ChaseAndAttack();
         }
     }
@@ -51,7 +51,7 @@ public class ChomperAttackController : MonoBehaviour
         float minX = Mathf.Min(enemyController.pointA.x, enemyController.pointB.x);
         float maxX = Mathf.Max(enemyController.pointA.x, enemyController.pointB.x);
 
-        Debug.Log("[Chase] Enemy at: " + transform.position + " | Player at: " + player.position);
+        //Debug.Log("[Chase] Enemy at: " + transform.position + " | Player at: " + player.position);
 
         float playerX = player.position.x;
         float enemyX = transform.position.x;
