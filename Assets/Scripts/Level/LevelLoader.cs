@@ -38,10 +38,6 @@ public class LevelLoader : MonoBehaviour
                 Cursor.lockState = CursorLockMode.Locked;
                 break;
         }
-
-        Debug.Log("LevelName: " + LevelName + "LevelStatus: " + levelStatus);
-
-
     }
 }
 

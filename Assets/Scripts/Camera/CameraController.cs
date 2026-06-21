@@ -63,35 +63,22 @@ public class CameraController : MonoBehaviour
 
     }
 
-    //private void Update()
-    //{
-    //    HandleCameraUpDown();
-
-    //    transform.localPosition = Vector3.Lerp(transform.localPosition, targetLocalPos, currentSpeed * Time.deltaTime);
-    //}
-
     private void HandleCameraUpDown()
     {
         if (Input.GetKey(KeyCode.W))
         {
             targetLocalPos = originalLocalPos + Vector3.up * cameraMoveUnit;
             currentSpeed = speed;
-
-            Debug.Log("UpSpeed: " + currentSpeed);
         }
         else if (Input.GetKey(KeyCode.S))
         {
             targetLocalPos = originalLocalPos + Vector3.down * cameraMoveUnit;
             currentSpeed = speed;
-
-            Debug.Log("DownSpeed: " + currentSpeed);
         }
         else
         {
             targetLocalPos = originalLocalPos;
             currentSpeed = returnSpeed;
-
-            //Debug.Log("ReturnSpeed: " + currentSpeed);
         }
 
         targetLocalPos = Vector3.Lerp(targetLocalPos, targetLocalPos, currentSpeed * Time.deltaTime);
@@ -100,7 +87,6 @@ public class CameraController : MonoBehaviour
 
     public IEnumerator Shake(float duration, float magnitude)
     {
-        //Vector3 originalPos = transform.localPosition;
 
         float elapsed = 0f;
         while (elapsed < duration)
@@ -110,7 +96,6 @@ public class CameraController : MonoBehaviour
 
             shakeOffset = new Vector3(x, y, 0f);
 
-            //transform.localPosition = new Vector3(originalPos.x + x, originalPos.y + y, originalPos.z);
             elapsed += Time.deltaTime;
             yield return null;
         }

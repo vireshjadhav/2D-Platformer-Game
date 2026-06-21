@@ -27,9 +27,11 @@ public class LevelManager : MonoBehaviour
 
     private void Start()
     {
-        if (GetLevelStatus(Levels[0]) == LevelStatus.Locked)
+        LevelStatus status = GetLevelStatus(Levels[0]);
+
+        if (status == LevelStatus.Locked)
         {
-            SetLevelStatus(Levels[0], LevelStatus.Unlocked);
+            instance.SetLevelStatus(Levels[0], LevelStatus.Unlocked);
         }
     }
 
@@ -48,7 +50,6 @@ public class LevelManager : MonoBehaviour
         int nextSceneIndex  = currentSceneIndex + 1;
         if(nextSceneIndex < Levels.Length)
         {
-            Debug.Log("nextSceneIndex:" + nextSceneIndex);
             SetLevelStatus(Levels[nextSceneIndex], LevelStatus.Unlocked);
         }
     }
@@ -57,6 +58,5 @@ public class LevelManager : MonoBehaviour
     {
         PlayerPrefs.SetInt(level, (int)levelStatus);
         PlayerPrefs.Save();
-        Debug.Log("Setting Level:" + level + "Status:" + levelStatus);
     }
 }

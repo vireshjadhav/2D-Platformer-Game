@@ -27,7 +27,6 @@ public class VenomBallProjectile : MonoBehaviour
         {
             col.enabled = false;
             Invoke(nameof(EnableCollider), 0.1f);
-            Debug.Log("Collision is " + col.enabled);
         }
         Destroy(gameObject, lifeTime);
     }
@@ -59,7 +58,6 @@ public class VenomBallProjectile : MonoBehaviour
             //hitPlayer.canDealDamage = false;
 
             SoundManager.Instance.Play(Sounds.PlayerDamage);
-            Debug.Log("Player hit by venom ball");
 
             //if (hitPlayer != null && hitPlayer.canDealDamage)
             //{

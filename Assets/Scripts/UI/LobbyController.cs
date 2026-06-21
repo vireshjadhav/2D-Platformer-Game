@@ -110,9 +110,13 @@ public class LobbyController : MonoBehaviour
 
     private void Quit()
     {
-        Debug.Log("Application Closed");
         SoundManager.Instance.Play(Sounds.ButtonClick);
+
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#else
         Application.Quit();
+#endif
     }
 
     private void PlayGame()

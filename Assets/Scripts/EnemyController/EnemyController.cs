@@ -109,7 +109,6 @@ public class EnemyController : MonoBehaviour
             //playerController.canDealDamage = false;
 
             SoundManager.Instance.Play(Sounds.PlayerDamage);
-            Debug.Log("Player hit the enemy collider");
             playerController.HurtAnimation();
 
             float directionX = collision.transform.position.x > transform.position.x ? 1f : -1f;
@@ -163,7 +162,6 @@ public class EnemyController : MonoBehaviour
 
     public void PlayerEnteredAttackRange(Transform player)
     {
-        Debug.Log("Player Entered Attack Range");
         isPlayerInAttackRange = true;
         playerTarget = player;
         PlayAttackAnimation(player.transform);
@@ -171,7 +169,6 @@ public class EnemyController : MonoBehaviour
 
     public void PlayerExitedAttackRange()
     {
-        Debug.Log("Player Exited Attack Range ");
         isPlayerInAttackRange = false;
         playerTarget = null;
         StopAttackAnimation();

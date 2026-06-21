@@ -40,7 +40,6 @@ public class ChomperAttackController : MonoBehaviour
 
         if (enemyController.isPlayerInAttackRange && player != null)
         {
-            //Debug.Log("[Chase] chasing player at: " + player.position);
             ChaseAndAttack();
         }
     }
@@ -51,7 +50,6 @@ public class ChomperAttackController : MonoBehaviour
         float minX = Mathf.Min(enemyController.pointA.x, enemyController.pointB.x);
         float maxX = Mathf.Max(enemyController.pointA.x, enemyController.pointB.x);
 
-        //Debug.Log("[Chase] Enemy at: " + transform.position + " | Player at: " + player.position);
 
         float playerX = player.position.x;
         float enemyX = transform.position.x;
@@ -60,28 +58,21 @@ public class ChomperAttackController : MonoBehaviour
         if (playerX < minX)
         {
             targetPos = new Vector3(minX, transform.position.y, transform.position.z);
-            Debug.Log("[Chase] Player left of patrol bounds. Moving to PointA.");
         }
         else if (playerX > maxX)
         {
             targetPos = new Vector3(maxX, transform.position.y, transform.position.z);
-            Debug.Log("[Chase] Player right of patrol bounds. Moving to PointB.");
         }
         else
         {
             targetPos = new Vector3(playerX, transform.position.y, transform.position.z);
-            Debug.Log("[Chase] Player inside patrol bounds. Chasing player.");
         }
 
-            //float targetX = Mathf.Clamp(player.position.x, minX, maxX);
-
-            //Vector3 targetPos = new Vector3(targetX, transform.position.y, transform.position.z);
 
             float distance = Vector2.Distance(transform.position, targetPos);
 
-            if (distance > stopDistance)
+        if (distance > stopDistance)
         {
-            Debug.Log("[Chase] Moving towards player. Distance: " + distance);
             transform.position = Vector3.MoveTowards(transform.position, targetPos, chaseSpeed * Time.deltaTime);
             animator.SetFloat("PatrolSpeed", chaseSpeed);
         }
@@ -89,13 +80,11 @@ public class ChomperAttackController : MonoBehaviour
         {
             if (playerX >= minX && playerX <= maxX)
             {
-                Debug.Log("[Attack] Player in bite range! Attacking now.");
                 animator.SetFloat("PatrolSpeed", 0);
                 animator.SetBool("IsCollided", true);
             }
             else
             {
-                Debug.Log("[Chase] Reached patrol boundary, stopping chase.");
                 animator.SetFloat("PatrolSpeed", 0);
             }
         }

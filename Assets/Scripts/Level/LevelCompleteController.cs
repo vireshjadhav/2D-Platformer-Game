@@ -17,10 +17,8 @@ public class LevelCompleteController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("Collision: " + other.gameObject.name);
         if (other.gameObject.GetComponent<PlayerController>() != null)
         {
-            Debug.Log("Level finished by the player");
             StartCoroutine(CompleteLevelSequence(other.gameObject));
         }
     }

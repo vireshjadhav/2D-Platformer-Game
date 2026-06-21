@@ -183,7 +183,6 @@ public class PlayerController : MonoBehaviour
     {
         if (other.gameObject.CompareTag("KillZone"))
         {
-            Debug.Log("Player entered the killzone");
             PlayerDied();
         }
     }
@@ -219,7 +218,6 @@ public class PlayerController : MonoBehaviour
     }
     public void KillPlayer()
     {
-        Debug.Log("Player is killed by enemy.");
         animator.SetBool("IsDead", true);
         isDead = true;
         StartCoroutine(DestroyAfterDelay(deathAnimationDelay));
@@ -242,18 +240,13 @@ public class PlayerController : MonoBehaviour
     }
     public void PushPlayerAway(Vector2 direction)
     {
-        if (!canDealDamage)
-        {
-            Debug.Log("Returned because canDealDamage is false");
-            return;
-        }
+        if (!canDealDamage) return;
 
         canDealDamage = false;
         isKnockedBack = true; 
         rb2d.velocity = Vector2.zero;
 
         Vector2 knockDir = new Vector2(direction.x * pushStrenght, direction.y * pushStrenght * knockBackMultiplier);
-        Debug.Log("Knock back Direction: " + knockDir);
         rb2d.AddForce(knockDir, ForceMode2D.Impulse);
 
         HurtAnimation();
@@ -262,7 +255,6 @@ public class PlayerController : MonoBehaviour
     }
     private IEnumerator knockBackCoroutine()
     {
-        Debug.Log("Push Back Coroutine is called");
         yield return new WaitForSeconds(knockbackDuration);
         isKnockedBack = false;
     }

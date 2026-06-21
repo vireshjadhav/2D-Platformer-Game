@@ -60,7 +60,6 @@ public class GameOverController : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
 
         SoundManager.Instance.StopAllSounds();
-        Debug.Log("CurrentSceneIndex " + currentSceneIndex);
 
         livesController.ResetPlayer();
         livesController.playerController.transform.position = respawnPoint.position;
