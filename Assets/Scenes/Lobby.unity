@@ -1384,6 +1384,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9184441b19fee134eaf146aa18980606, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  resetOnNextLaunch: 0
 --- !u!4 &430798080
 Transform:
   m_ObjectHideFlags: 0
@@ -2313,6 +2314,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2764408694811959621, guid: 3d93d5b605d3b1a40b055faad8216203,
+        type: 3}
+      propertyPath: cameraMoveUnit
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2764408694811959678, guid: 3d93d5b605d3b1a40b055faad8216203,
         type: 3}

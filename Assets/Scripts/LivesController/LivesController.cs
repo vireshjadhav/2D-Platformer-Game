@@ -26,14 +26,11 @@ public class LivesController : MonoBehaviour
         }
     }
 
-    public void ReduceLives(int Death)
+    public void ReduceLives(int heart)
     {
         if (dead) return;
 
-        //Debug.Log("Death :"+ Death);
-        //Debug.Log("Life :"+ life);
-        life -= Death;
-        //Debug.Log("Life :" + life);
+        life -= heart;
 
         if (life >= 0 && life < hearts.Length && hearts[life] != null)
         {

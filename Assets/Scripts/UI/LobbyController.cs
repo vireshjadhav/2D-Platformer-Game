@@ -112,6 +112,8 @@ public class LobbyController : MonoBehaviour
     {
         SoundManager.Instance.Play(Sounds.ButtonClick);
 
+        ResetProgressOnLaunch.SetForceResetOnNextLaunch();
+
 #if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false;
 #else
