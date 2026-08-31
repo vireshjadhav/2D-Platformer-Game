@@ -25,15 +25,19 @@ public class LevelLoader : MonoBehaviour
                 break;
 
             case LevelStatus.Unlocked:
+                SoundManager.Instance.Play(Sounds.ButtonClick);
                 SceneManager.LoadScene(LevelName);
+                Cursor.visible = false;
+                Cursor.lockState = CursorLockMode.Locked;
                 break;
 
             case LevelStatus.Completed:
+                SoundManager.Instance.Play(Sounds.ButtonClick);
                 SceneManager.LoadScene(LevelName);
+                Cursor.visible = false;
+                Cursor.lockState = CursorLockMode.Locked;
                 break;
         }
-
-        Debug.Log("LevelName: " + LevelName + "LevelStatus: " + levelStatus);
     }
 }
 
